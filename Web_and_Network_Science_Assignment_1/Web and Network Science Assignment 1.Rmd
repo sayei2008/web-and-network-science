@@ -1,0 +1,279 @@
+---
+title: "Web and Network Science Assignment 1"
+author: "Sai Krishna Lakshminarayanan (18230229) ,Surya Balakrishnan Ramakrishnan(18231072)"
+date: "4 February 2019"
+output: word_document
+---
+Introduction:
+
+Web crawling is the process of systematically scanning the world wide web to either extract information from the webpage or to analyse the connectivity of a web page with some other webpage. Web crawling is done through an internet bot which is called spider or crawler. Web crawlers copies the indented web site so that it can be processed by a search engine which indexes the required page which makes it easy for the user to easily search the web page. In this case we have used R programming language with the Rcrawler package which crawls through a given URL to find the connected pages, while on the other hand the Rvest package is used to extract some information from the intended web page.
+
+Data crawling methodology:
+
+We have used the web sites of Dublin Business School (dbs.ie) and Letterkenny Institute of Technology (lyit.ie) for the purpose of web crawling. The first step would be to determine the connectivity of both the web sites. The connectivity is determined by crawling the web sites to check its' out degrees in other words we check which are the web pages which are directly linked to. This task is carried out using the Rcrawler package which takes an URL as a reference and crawls through all the pages connected to the reference page. The Rcrawler by default crawls through pages up to level 10 which means that it will keep crawling till it reaches a page which is 10 steps away from the initial reference URL. Due to computation and time constraints we represent the pages until 2 levels, in other words we have crawled pages which are 2 steps away from the reference URL. The crawled web pages are processed and its properties such are in degree, out degree, from node, to node etc are stored in a data frame. Now for representing the data frame it is necessary that it is converted to the igraph format which is done using graph.data.frame command.
+
+The crawled websites are represented as a directed graph, which is a connection of vertices using edges. Here vertices represent the web pages themselves and edges represent the connectivity between the web pages. Directed graph means that the connectivity is directed and not necessarily omni directional. The R igraph package is used to create a directed graph of the crawled web site. Before plotting the crawled web sites, it is necessary that some data cleaning methodology is implemented so that redundant connections, loop and multiple edges can be removed. This is accomplished using the simplify function of the igraph package.
+
+Extracting data from the web pages:
+
+Since we took the web pages of Dublin Business School and Letterkenny Institute of Technology, we decided a comparison could be made between the courses which each of these institutions offers. To crawl through these pages and extract the required information we used the Rvest package. The Rvest along with an add on extension called selector gadget has been used to extract information which are stored within the HTML tags of the respective web pages. To select the course information which is stored within the TAG  NAME  to extract all the names of the courses which are offered by the educational institution. Similarly details such as the course type undergraduate or postgraduate and the NFQ level of the course has also been extracted. Based on the extracted information the course offerings and its type and NFQ levels can be compared.
+
+We have also computed the measure of graph connectivity which represents which of the nodes are actually connected using an edge. Based on the connectivity we have determined which of the nodes are strongly and weekly connected. We also computed the components of the graph. We also computed the shortest distance between the different pages and also the diameter which represents the maximum distance between any two nodes, in this case web pages.
+
+
+
+
+```{r}
+#loading the required packages
+library(Rcrawler)
+library(igraph)
+library(rvest)
+```
+
+```{r}
+# First website Dublin Business School
+Rcrawler(Website = "https://www.dbs.ie/", no_cores = 8, no_conn = 8 , NetworkData = TRUE, NetwExtLinks =TRUE,  statslinks = FALSE,MaxDepth = 1,Timeout = 2)#case 1 with stats link as true
+#giving depth as 1 for computational and time constraint reason. provide 2 or 3 if needed but it will take alot of time.
+```
+
+```{r}
+#getting insights of the obtained dataset
+head(NetwEdges)
+head(NetwIndex)
+head(INDEX)
+```
+
+```{r}
+#considering to plot the entire nodes and edges
+big<-data.frame(From=NetwEdges$From,To=NetwEdges$To)
+big1<-graph.data.frame(big,directed = T)
+big1<-simplify(big1, remove.multiple = TRUE, remove.loops = TRUE,
+                     edge.attr.comb = igraph_opt("edge.attr.comb"))
+plot(big1) 
+
+```
+
+
+
+```{r}
+#simplifying and plotting for the in and out degree values for the ones with url scrapped
+dbsgraph<-data.frame(IN=INDEX$IN,OUT=INDEX$OUT)
+dbsgraph<-graph.data.frame(dbsgraph,directed = T)
+
+dbsgraph<-simplify(dbsgraph, remove.multiple = TRUE, remove.loops = TRUE,
+         edge.attr.comb = igraph_opt("edge.attr.comb"))#removing the duplicate and loops
+```
+
+```{r}
+#plotting for the cleaned ones
+plot(dbsgraph, edge.arrow.size=0.25, vertex.color="gold", vertex.size=15, 
+     
+     vertex.frame.color="red", vertex.label.color="black", 
+     
+     vertex.label.cex=0.7, vertex.label.dist=0.1, edge.curved=0.2) 
+```
+```{r}
+#scenario two for statslink as true
+Rcrawler(Website = "https://www.dbs.ie/", no_cores = 8, no_conn = 8 , NetworkData = TRUE, NetwExtLinks =TRUE,  statslinks = TRUE,MaxDepth = 1,Timeout = 2)
+```
+
+```{r}
+#plot for case 2
+dbsnetwork<-data.frame(IN=INDEX$IN,OUT=INDEX$OUT)
+dbsnetwork<-graph.data.frame(dbsnetwork,directed = T)
+
+dbsnetwork<-simplify(dbsnetwork, remove.multiple = TRUE, remove.loops = TRUE,
+         edge.attr.comb = igraph_opt("edge.attr.comb"))
+
+plot(dbsnetwork, edge.arrow.size=0.25, vertex.color="gold", vertex.size=15, 
+     
+     vertex.frame.color="red", vertex.label.color="black", 
+     
+     vertex.label.cex=0.8, vertex.label.dist=0.1, edge.curved=0.2)
+```
+
+```{r}
+#getting the weak components
+weak_dbs <- components(dbsnetwork, mode="weak")
+groups(weak_dbs)
+```
+
+```{r}
+#getting strong components
+strong_dbs <- components(dbsnetwork, mode="strong")
+groups(strong_dbs)
+```
+
+```{r}
+farthest_vertices(dbsnetwork,directed = TRUE)
+```
+
+```{r}
+#diameter of the graph
+diameter(dbsnetwork, directed = TRUE)
+```
+
+```{r}
+#For second case with Letterkenny Institute of Technology with stats link as false in first casse
+Rcrawler(Website = "https://www.lyit.ie/", no_cores = 8, no_conn = 8 , NetworkData = TRUE, NetwExtLinks =TRUE,  statslinks = FALSE,MaxDepth = 1,Timeout = 2)
+```
+
+```{r}
+#peeking into the dataset
+head(NetwEdges)
+head(NetwIndex)
+head(INDEX)
+```
+
+```{r}
+#putting for large one
+big<-data.frame(From=NetwEdges$From,To=NetwEdges$To)
+big1<-graph.data.frame(big,directed = T)
+big1<-simplify(big1, remove.multiple = TRUE, remove.loops = TRUE,
+                     edge.attr.comb = igraph_opt("edge.attr.comb"))
+
+plot(big1)
+
+```
+
+```{r}
+a<-data.frame(IN=INDEX$IN,OUT=INDEX$OUT)
+litNetwork <- graph.data.frame(a, directed=T)
+lyitINDEX <- INDEX
+lyitNetwEdges <- NetwEdges
+```
+
+```{r}
+#cleaning and simplifying the data by removing duplicate and loop
+litNetwork<-simplify(litNetwork, remove.multiple = TRUE, remove.loops = TRUE,
+         edge.attr.comb = igraph_opt("edge.attr.comb"))
+
+```
+
+```{r}
+#plotting based on it
+plot(litNetwork, edge.arrow.size=0.3, vertex.color="gold", vertex.size=15, 
+     
+     vertex.frame.color="gray", vertex.label.color="black", 
+     
+     vertex.label.cex=0.9, vertex.label.dist=0.1, edge.curved=0.5) 
+
+```
+
+```{r}
+#For second case with Letterkenny Institute of Technology with statslinks as true
+Rcrawler(Website = "https://www.lyit.ie/", no_cores = 8, no_conn = 8 , NetworkData = TRUE, NetwExtLinks =TRUE,  statslinks = TRUE,MaxDepth = 1,Timeout = 2)
+```
+
+
+```{r}
+#plotting it
+a<-data.frame(IN=INDEX$IN,OUT=INDEX$OUT)
+litNetwork <- graph.data.frame(a, directed=T)
+litNetwork<-simplify(litNetwork, remove.multiple = TRUE, remove.loops = TRUE,
+         edge.attr.comb = igraph_opt("edge.attr.comb"))
+plot(litNetwork, edge.arrow.size=0.3, vertex.color="gold", vertex.size=15, 
+     
+     vertex.frame.color="gray", vertex.label.color="black", 
+     
+     vertex.label.cex=0.5, vertex.label.dist=0.1, edge.curved=0.5) 
+
+```
+
+```{r}
+#calcualting farthest vertices
+farthest_vertices(litNetwork,directed = TRUE)
+```
+
+```{r}
+#calculating diameter
+diameter(litNetwork, directed = TRUE)
+```
+
+```{r}
+#getting shortest paths
+dist_matrix <- distances(litNetwork,  mode="out")
+shortest_paths(litNetwork, from="164", to = "177", mode = c("out"), # out indicates paths from node 12
+  weights = NULL,  output = c("both"))
+```
+
+```{r}
+all_shortest_paths(litNetwork, from="1", to =V(litNetwork), mode = c("out"))
+```
+
+```{r}
+#strong components
+str <- components(litNetwork, mode="strong")
+groups(str)
+```
+
+```{r}
+#weak components
+weak <- components(litNetwork, mode="weak")
+groups(weak)
+```
+
+```{r}
+#Scrapping the data regarding dbs ug courses
+url_dbs<-read_html('https://www.dbs.ie/courses/full-time-undergraduate')
+dbs_course<-data.frame(Name= html_text(html_nodes(url_dbs,".CourseListItem h4 a")),
+                       Type= html_text(html_nodes(url_dbs,".CourseType span")),
+                       Level=html_text(html_nodes(url_dbs,".CourseType+ div span")) 
+                        )
+```
+
+
+```{r}
+url_lyit<-read_html('https://www.lyit.ie/Study-at-LYIT/Find-a-course/?lvl=4')
+lyit_course<-data.frame(Name= html_text(html_nodes(url_lyit,".CourseListItem h3")),
+                        Type= html_text(html_nodes(url_lyit,".CourseType span")),
+                       Level=html_text(html_nodes(url_lyit,".CourseType+ div p"))
+                        )
+                       
+```
+
+
+Observations:
+
+.	The web page of Letterkenny Institute of Technology has more weak nodes from which we can say that this web page is weakly connected, in other words there does not exist a path between every pair of nodes.
+.	The web page of Dublin Business School has a greater number of strong nodes which means that it is strongly connected and there exist a path between every pair of nodes.
+.	The number of out degrees for the Dublin Business School's web page which means there are more pages which are linked to it as compared to the website of Dublin Business School. 
+.	Even though Letterkenny Institute of Technology's web page is properly connected and provides more information, the construction of the website was not proper, the use of inline HTML editing causes difficulty to crawl the web site and obtain information from it, whereas the web site of  Dublin Business School is properly tagged and structured.
+.	The Dublin Business School's website has proper name given for each of the information such as .CourseListItem h4 a which holds the name of the course, where as the Letterkenny Institute of Technology's web page gives generic reference to the information such as .CouseInfo h4.
+.	From the graph it is evident that the interconnectivity is better in the Dublin Business School's web site
+
+Conclusion:
+
+From the graphical representations and several mathematical metrics computed we can say that the web page of Letterkenny Institute of Technology is well connected and has more pages linked to it which suggests that the amount of information which one can find on its webpage is more as compared to the web page of Dublin Business School.
+
+Work Split Up:
+
+Work done by Sai Krishna Lakshminarayanan (18230229)
+
+.	Crawling the web page of Dublin Business School (DBS)
+.	Extracting information from the web page of DBS
+.	Construction of graphs using igraph for DBS page
+.	Interpretation of network data for DBS
+.	Observations and calculations for DBS page
+
+Work done by Surya Balakrishnan Ramakrishnan (18231072)
+
+.	Crawling the web page of Letterkenny Institute of Technology (LYIT)
+.	Extracting information from the web page of LYIT
+.	Construction of graphs using igraph for LYIT page
+.	Interpretation of network data for LYIT
+.	Observations and calculations for LYIT page
+
+
+
+
+References:
+
+1.	https://www.rdocumentation.org/packages/Rcrawler/versions/0.1.5
+2.	https://igraph.org/r/doc/simplify.html
+3.	http://cneurocvs.rmki.kfki.hu/igraph/doc/R/graph.data.frame.html
+4.	https://cran.r-project.org/web/packages/Rcrawler/Rcrawler.pdf
+5.	https://en.wikipedia.org/wiki/Distance_(graph_theory)
+6.	https://en.wikipedia.org/wiki/Web_crawler
+7.	Week 2 and 3 Lecture Notes in Blackboard
+

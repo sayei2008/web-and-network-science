@@ -1,0 +1,1639 @@
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"f8f54eac9f","applicationID":"5961298","transactionName":"bgBTZRYCX0sAABVZW1dKdV4QLVRMIgwPREZWCV1UFkxiXQARAlh2Vh0eeAoHVEA=","queueTime":0,"applicationTime":897,"ttGuid":"9FBF7B8473F79053","agent":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script><title>
+	International Students
+</title>
+
+
+
+<link href="/StyleSheet/global.css" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet" type="text/css">
+    <!--[if lte IE 9]><link rel="stylesheet" href="/StyleSheet/ie9.css" type="text/css" /><![endif]-->
+    <!--[if lt IE 9]><link rel="stylesheet" href="/StyleSheet/ie8.css" type="text/css" /><![endif]-->
+    <meta property="og:type" content="website">
+    <!-- removed meta -->
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+w[l] = w[l] || []; w[l].push({
+'gtm.start':
+new Date().getTime(), event: 'gtm.js'
+}); var f = d.getElementsByTagName(s)[0],
+j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-WTGV6Q');
+</script>
+
+    <!-- End Google Tag Manager -->
+    <script>var _prum = [['id', '52d911a5abe53da00c000000'],
+['mark', 'firstbyte', (new Date()).getTime()]];
+(function () {
+var s = document.getElementsByTagName('script')[0]
+, p = document.createElement('script');
+p.async = 'async';
+p.src = '//rum-static.pingdom.net/prum.min.js';
+s.parentNode.insertBefore(p, s);
+})();
+</script>
+
+    <script src="/Javascript/jquery-3.3.1.min.js"></script>
+    
+<link href="App_Themes/Content/CSS/Override.css" type="text/css" rel="stylesheet"><script type="text/javascript">$(document).ready(function () {
+    var currentYear = new Date().getFullYear();
+    $(".copy").text(currentYear);
+});</script><script type="text/javascript" src="/Javascript/international_students.js"></script><meta name="Generator" content="Sitefinity 10.2.6626.0 SE"><link rel="canonical" href="https://www.dbs.ie/international-students"><meta name="viewport" content="width=device-width, initial-scale=1.0"><script type="text/javascript">
+	(function() {var _rdDeviceWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;var _rdDeviceHeight = (window.innerHeight > 0) ? window.innerHeight : screen.height;var _rdOrientation = (window.width > window.height) ? 'landscape' : 'portrait';})();
+</script><link href="/Telerik.Web.UI.WebResource.axd?d=xXLWwJLoniotGGYycF401aHr8FKzDfXvKl1ZspUoAgb6kqMkAjv5KpYf9GPZFfRvITvyT5xMvm9pXqf4fAbXPpMeOX1002T8uIkmk0EiNZytqobfxrDJME9v2vKOyo3mdDx2C_Xaqj-o9qqsxcSFMg2&amp;t=636577066476378381&amp;compress=0&amp;_TSM_CombinedScripts_=%3b%3bTelerik.Sitefinity.Resources%2c+Version%3d10.2.6626.0%2c+Culture%3dneutral%2c+PublicKeyToken%3db28c218413bdf563%3aen%3a75ec3a6b-4122-4e56-a1f4-58f0be0d90a0%3a7a90d6a" type="text/css" rel="stylesheet"><link href="/Telerik.Web.UI.WebResource.axd?d=xXLWwJLoniotGGYycF401aHr8FKzDfXvKl1ZspUoAgb6kqMkAjv5KpYf9GPZFfRvITvyT5xMvm9pXqf4fAbXPpMeOX1002T8uIkmk0EiNZytqobfxrDJME9v2vKOyo3mdDx2C_Xaqj-o9qqsxcSFMg2&amp;t=636577066476378381&amp;compress=0&amp;_TSM_CombinedScripts_=%3b%3bTelerik.Sitefinity.Resources%2c+Version%3d10.2.6626.0%2c+Culture%3dneutral%2c+PublicKeyToken%3db28c218413bdf563%3aen%3a75ec3a6b-4122-4e56-a1f4-58f0be0d90a0%3a83fa35c7" type="text/css" rel="stylesheet"><link href="/Sitefinity/Public/ResponsiveDesign/layout_transformations.css?pageDataId=de93da29-53ff-6d7e-be9c-ff000003f2be&amp;pageSiteNode=DD93DA29-53FF-6D7E-BE9C-FF000003F2BE/c9471d86-236d-4db8-af93-fabfb5fa3543/SitefinitySiteMap" type="text/css" rel="stylesheet"><link href="/StyleSheet/dbs_100.css" type="text/css" rel="stylesheet" media="all"><link href="/StyleSheet/international_students.css" type="text/css" rel="stylesheet" media="all"><link href="StyleSheet/Responsive.min.css" type="text/css" rel="stylesheet" media="all and (min-width:0px) and (max-width:320px)"><link href="StyleSheet/Responsive.min.css" type="text/css" rel="stylesheet" media="only screen and (min-width: 320px) and (max-width: 480px)"><link href="StyleSheet/Responsive.min.css" type="text/css" rel="stylesheet" media="all and (min-width:480px) and (max-width:960px)"><link href="StyleSheet/Responsive_Tablet.min.css" type="text/css" rel="stylesheet" media="only screen and (min-width: 600px) and (max-width : 1024px)"><link href="StyleSheet/responsive_small.min.css" type="text/css" rel="stylesheet" media="all and (min-width:0px) and (max-width:320px)"><link href="StyleSheet/responsive_small.min.css" type="text/css" rel="stylesheet" media="all and (min-width:0px) and (max-width:480px)"><link href="StyleSheet/tiny.css" type="text/css" rel="stylesheet" media="all and (min-width:0px) and (max-width:260px)"></head>
+<body>
+    <form method="post" action="./international-students" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="ctl08_TSSM" id="ctl08_TSSM" value="">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTg0MzkxNDMzMGRkmCjAODHxy3vTDdpGbLXEQPBPAJ9I+KUcjBBp14d1spM=">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="https://ajax.aspnetcdn.com/ajax/4.6/1/WebForms.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+window.WebForm_PostBackOptions||document.write('<script type="text/javascript" src="/WebResource.axd?d=HuKDHLc8WlDUoLUXWQ0G5an1DSJSd4BPCCA5x4lGxTN82py2X_1WCtW8S9iw6EmxuFFQBMkcZhecXGGoUdKLLwpEGLBUBCYQ7o6cWB6liMU1&amp;t=636577066476690871"><\/script>');//]]>
+</script>
+
+
+
+<script src="https://ajax.aspnetcdn.com/ajax/4.6/1/MicrosoftAjax.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+(window.Sys && Sys._Application && Sys.Observer)||document.write('<script type="text/javascript" src="/ScriptResource.axd?d=ZVXTYQm8cqYt-GZIDyGTHrbLkVZ87fAiJoYtuB5b-DIsvnzm4L-1msk8HClmsQvZi-qTXd3QyOVJemw_pIXfiElMuQDMcVP_PCjDQ1His4Vs6djgMFi6NHAQYAzygi2KoRzYk9qR4tOwvkvNQ01JM71U427XgfIYDu5dsbo9x_o1&t=ffffffffcd368728"><\/script>');//]]>
+</script>
+
+<script src="https://ajax.aspnetcdn.com/ajax/4.6/1/MicrosoftAjaxWebForms.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+(window.Sys && Sys.WebForms)||document.write('<script type="text/javascript" src="/ScriptResource.axd?d=XwtxuxP6CaFHvv89F8bgRJtkTMphcQuCeILJmyIwDKgcYCEq9W12M9hYJcaEXkqGo8dZoFUa8-zw-qjPfRvoFzaJcjfHQcdg_eiPkhKWXRoYrKl-BwM9l3kLM_EUFc7nYVjEvzyE32MGgHx1LRtnbTmgI_PVIwSDwkSeLJC_oU-fVmMbYePcmeaOCkY-H1Sw0&t=ffffffffcd368728"><\/script>');//]]>
+</script>
+
+<script src="https://code.jquery.com/jquery-1.12.1.min.js" type="text/javascript"></script>
+<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=fUkP-ZJzrXJgt1q2qwomKw48eMiTLDEgI55veEUT74XCNo7CdiagHr6nlW4gJJ7RYP-dVjYbtWEj4PsWivWDpQoTk_G-CsWDaSfvRqssFYEgojctvQIeZkj9oiBNvqUmjM6SYw3S94p93Rdz4Owsb6ZLi_F6nthl08nw3UfV84TzyLLEzoKQz2OUV_0zes0gr8a89kk6217a7NrsXGXeKw2&amp;t=388ae382" type="text/javascript"></script>
+<script src="/Frontend-Assembly/Telerik.Sitefinity.Frontend.Search/Mvc/Scripts/SearchBox/Search-box.js" type="text/javascript"></script>
+    
+<div id="CookDiv" class="cookdiv" style="display:none">
+    <div class="InnerWrapper">
+        <p class="cookp" style="z-index:999">Our site uses cookies. By continuing to use our site you are agreeing to our <a href="/cookie-policy">cookie policy. </a></p>
+        <input type="submit" name="ctl00$usrCtrl$Hide" value="Accept and close" onclick="createCookie(&#39;DBS&#39;,&#39;Accept Cookies&#39;,30);" id="usrCtrl_Hide" class="DBS_Button DBS_Green" style="margin: 10px; padding: 10px 25px !important;">
+    </div>
+</div>
+<script type="text/javascript">
+    function createCookie(name, value, day) {
+        var date = new Date();
+        date.setTime(date.getTime() + (day * 24 * 60 * 60 * 1000));
+        var expires = "; expires=" + date.toGMTString();
+        document.cookie = name + "=" + value + expires + "; path=/";
+    }
+    if (readCookie("DBS") == undefined) {
+        document.getElementById("CookDiv").style.display = "block"
+    }
+    else {
+        window.dataLayer.push({
+            'hasUserConsented': 'true',
+            'event': 'track_GAEventConsent'
+        });
+    }
+    function readCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+</script>
+
+
+
+    
+    <!-- Google Tag Manager (noscript) -->
+    
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div id="mobile-indicator"></div>
+    
+
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$Scriptmanager1', 'form1', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+        <div>
+            
+<div class="sf_cols Header DBS_White">
+    <div style="" class="sf_colsOut sf_1col_1_100">
+        <div id="ContentPlaceHolder1_TB6148D1A001_Col00" class="sf_colsIn sf_1col_1in_100"><div class='sfContentBlock'><!--[if IE 8]>
+<style type="text/css">
+  
+.DBS_Gray {
+  display: none;
+ 
+}
+</style>
+<![endif]-->
+
+
+</div><div class="sf_cols InnerWrapper">
+    <div style="" class="sf_colsOut sf_1col_1_100">
+        <div id="ContentPlaceHolder1_TB6148D1A003_Col00" class="sf_colsIn sf_1col_1in_100"><div class="sf_cols">
+    <div class="sf_colsOut sf_2cols_1_25">
+        <div id="ContentPlaceHolder1_TB6148D1A021_Col00" class="sf_colsIn sf_2cols_1in_25"><div class='sfContentBlock  HomeLogo'><a href="http://www.dbs.ie/"><img src="/images/default-source/default-album/dbs_2012_rgb.png?sfvrsn=351bbce9_6&amp;MaxWidth=250&amp;MaxHeight=&amp;ScaleUp=false&amp;Quality=High&amp;Method=ResizeFitToAreaArguments&amp;Signature=34D4B8C8C7FEA5BF6AFDE26007122B6F351BE2E1" displaymode="Custom" alt="Dublin Business School" title="Dublin Business School" method="ResizeFitToAreaArguments" customsizemethodproperties="{'MaxWidth':'250','MaxHeight':'','ScaleUp':false,'Quality':'High'}"></a>
+
+
+</div>
+            
+        </div>
+    </div>
+    <div class="sf_colsOut sf_2cols_2_75">
+        <div id="ContentPlaceHolder1_TB6148D1A021_Col01" class="sf_colsIn sf_2cols_2in_75"><div class="sf_cols">
+    <div class="sf_colsOut sf_2cols_1_25">
+        <div id="ContentPlaceHolder1_TB6148D1A055_Col00" class="sf_colsIn sf_2cols_1in_25">
+            
+        </div>
+    </div>
+    <div class="sf_colsOut sf_2cols_2_75">
+        <div id="ContentPlaceHolder1_TB6148D1A055_Col01" class="sf_colsIn sf_2cols_2in_75">
+        
+        </div>
+    </div>
+</div>
+<div class="sf_cols">
+    <div class="sf_colsOut sf_2cols_1_25">
+        <div id="ContentPlaceHolder1_TB6148D1A056_Col00" class="sf_colsIn sf_2cols_1in_25">
+            
+        </div>
+    </div>
+    <div class="sf_colsOut sf_2cols_2_75">
+        <div id="ContentPlaceHolder1_TB6148D1A056_Col01" class="sf_colsIn sf_2cols_2in_75">
+<link href="/Frontend-Assembly/Telerik.Sitefinity.Frontend.Search/assets/dist/css/sf-search-box.min.css" rel="stylesheet" type="text/css">
+
+
+
+<div class="custom-search">
+    <input type="text" title="Search input" placeholder="Search for a course" id="2bd94961-aa3f-448c-abff-5b6dacb3ecc8" value="">
+    <button type="button" id="76a270d8-73b2-47c5-96a3-5701b2ef35f4">Search</button>
+
+    <input type="hidden" data-sf-role="resultsUrl" value="/search-results">
+    <input type="hidden" data-sf-role="indexCatalogue" value="searchindexv2">
+    <input type="hidden" data-sf-role="wordsMode" value="AllWords">
+    <input type="hidden" data-sf-role="disableSuggestions" value='false'>
+    <input type="hidden" data-sf-role="minSuggestionLength" value="2">
+    <input type="hidden" data-sf-role="suggestionFields" value="Title,Content">
+    <input type="hidden" data-sf-role="language">
+    <input type="hidden" data-sf-role="suggestionsRoute" value="/restapi/search/suggestions">
+    <input type="hidden" data-sf-role="searchTextBoxId" value='#2bd94961-aa3f-448c-abff-5b6dacb3ecc8'>
+    <input type="hidden" data-sf-role="searchButtonId" value='#76a270d8-73b2-47c5-96a3-5701b2ef35f4'>
+</div>
+
+
+
+
+
+        
+        </div>
+    </div>
+</div>
+<div class='sfContentBlock TopMenuContainer'><div class="TopGlobalMenu">
+<a href="http://www.dbs.ie/about-dbs/for-employers">Corporate Services</a> |
+<a href="http://library.dbs.ie">DBS Library</a> |
+<a href="http://www.dbs.ie/International-students">International Students</a> | <a href="http://www.dbs-students.com">Current Students</a> | <a href="http://www.dbs.ie/news-and-events"></a><a href="http://www.dbs.ie/news-events">News &amp; Events</a>&nbsp;</div>
+
+
+</div>
+
+<script>
+    $(document).ready(function () {
+
+        $(".searchDiv").click(function () {
+            event.stopPropagation();
+            $(".GlobalSearchBox").toggle();
+            $(".GlobalSearchBox input").focus();
+        });
+
+        $(".GlobalSearchBox input").attr("placeholder", "Type and hit enter...");
+    });
+</script>
+
+<div>
+    
+            <div id="main_navigation">
+                <ul id="menuroot">
+                    <li id="firstMenuItem"><a title="Home" href="https://www.dbs.ie">
+                        <img title="Home" class="icon" alt="Home" src="/images/default-source/icons/home.png"></a></li>
+        
+            <li class='trigger'>
+                <a class="&lt;%# DataBinder.Eval(Container.DataItem, &quot;CssStyle&quot;) %> FirstLevelMenu" href="courses">Courses</a>
+                <div class="SecondaryContainer">
+                    
+
+                            <ul class="menusecondlevel">
+                        
+                            <li>
+                                <a class="NavHeaderTopMenu">COURSES BY SUBJECT</a>
+                            </li>
+                        
+                            <li>
+                                <a href="courses/accounting-and-finance">Accounting & Finance</a>
+                            </li>
+                        
+                            <li>
+                                <a href="courses/arts">Arts</a>
+                            </li>
+                        
+                            <li>
+                                <a href="courses/business-management">Business & Management</a>
+                            </li>
+                        
+                            <li>
+                                <a href="courses/counselling-and-psychotherapy">Counselling & Psychotherapy</a>
+                            </li>
+                        
+                            <li>
+                                <a href="courses/information-technology">Information Technology</a>
+                            </li>
+                        
+                            <li>
+                                <a href="courses/law">Law</a>
+                            </li>
+                        
+                            <li>
+                                <a href="courses/marketing-and-event-management">Marketing & Event Management</a>
+                            </li>
+                        
+                            <li>
+                                <a href="courses/media-and-journalism">Media & Journalism</a>
+                            </li>
+                        
+                            <li>
+                                <a href="courses/professional-accountancy">Professional Accountancy</a>
+                            </li>
+                        
+                            <li>
+                                <a href="courses/psychology-social-science">Psychology & Social Science</a>
+                            </li>
+                        
+                            </ul>
+                        
+                    
+                            <ul class="menuaddlevel">
+                        
+                            <li>
+                                <a class="NavHeaderTopMenu">COURSES BY TYPE</a>
+                            </li>
+                        
+                            <li>
+                                <a href="courses/full-time-undergraduate">Full-time Degrees/ Certificates</a>
+                            </li>
+                        
+                            <li>
+                                <a href="courses/postgraduate">Postgraduate Programmes</a>
+                            </li>
+                        
+                            <li>
+                                <a href="courses/springboard">FREE* Springboard+ Programmes</a>
+                            </li>
+                        
+                            <li>
+                                <a href="courses/ict-skills-programme">FREE* ICT Skills Programmes</a>
+                            </li>
+                        
+                            <li>
+                                <a href="courses/evening-degree">Evening Degrees</a>
+                            </li>
+                        
+                            <li>
+                                <a href="courses/professional-accountancy">Professional Accountancy</a>
+                            </li>
+                        
+                            <li>
+                                <a href="courses/professional-evening-diploma">Professional Evening Diplomas</a>
+                            </li>
+                        
+                            <li>
+                                <a href="courses/international">International</a>
+                            </li>
+                        
+                            <li>
+                                <a href="courses/dbs-online">Online Courses at DBS</a>
+                            </li>
+                        
+                            </ul>
+                        
+                </div>
+            </li>
+        
+            <li class='trigger'>
+                <a class="&lt;%# DataBinder.Eval(Container.DataItem, &quot;CssStyle&quot;) %> FirstLevelMenu" href="about-dbs">Why DBS</a>
+                <div class="SecondaryContainer">
+                    
+
+                            <ul class="menusecondlevel">
+                        
+                            <li>
+                                <a class="NavHeaderTopMenu">WHY DBS</a>
+                            </li>
+                        
+                            <li>
+                                <a href="about-dbs/welcome">Welcome to Dublin Business School</a>
+                            </li>
+                        
+                            <li>
+                                <a href="about-dbs/history-of-dbs">History of DBS</a>
+                            </li>
+                        
+                            <li>
+                                <a href="about-dbs/academic-schools-staff">Academic School & Staff</a>
+                            </li>
+                        
+                            <li>
+                                <a href="about-dbs/recognition-and-accreditation">Recognition & Accreditation</a>
+                            </li>
+                        
+                            <li>
+                                <a href="advantage">DBS Advantage</a>
+                            </li>
+                        
+                            <li>
+                                <a href="about-dbs/for-employers">For Employers</a>
+                            </li>
+                        
+                            <li>
+                                <a href="about-dbs/for-guidance-counsellors">For Guidance Counsellors</a>
+                            </li>
+                        
+                            <li>
+                                <a href="about-dbs/kaplan-dublin-business-school">Kaplan businesses</a>
+                            </li>
+                        
+                            <li>
+                                <a href="about-dbs/jobs-dublin-business-school">Vacancies</a>
+                            </li>
+                        
+                            <li>
+                                <a href="about-dbs/hetac-institutional-review">HETAC Institutional Review</a>
+                            </li>
+                        
+                            <li>
+                                <a href="about-dbs/new-programmes-at-dbs">New programmes at DBS</a>
+                            </li>
+                        
+                            <li>
+                                <a href="about-dbs/dbs-esource">DBS eSource</a>
+                            </li>
+                        
+                            <li>
+                                <a href="about-dbs/news-and-events">News & Events</a>
+                            </li>
+                        
+                            <li>
+                                <a href="about-dbs/why-dbs">Why DBS</a>
+                            </li>
+                        
+                            <li>
+                                <a href="about-dbs/links-with-industry">Links with Industry</a>
+                            </li>
+                        
+                            </ul>
+                        
+                    
+                            <ul class="menuaddlevel">
+                        
+                            <li>
+                                <a class="NavHeaderTopMenu">STUDENT EXPERIENCE</a>
+                            </li>
+                        
+                            <li>
+                                <a href="student-experience/student-services">Student Services</a>
+                            </li>
+                        
+                            <li>
+                                <a href="student-experience/student-life">Student Life</a>
+                            </li>
+                        
+                            <li>
+                                <a href="student-experience/clubs-societies">Clubs and Societies</a>
+                            </li>
+                        
+                            <li>
+                                <a href="student-experience/disabilities-support">Disability Support</a>
+                            </li>
+                        
+                            <li>
+                                <a href="student-experience/outstanding-facilities">Outstanding Facilities</a>
+                            </li>
+                        
+                            <li>
+                                <a href="student-experience/volunteer-at-dbs">Volunteer at DBS</a>
+                            </li>
+                        
+                            <li>
+                                <a href="student-experience/alumni">Alumni</a>
+                            </li>
+                        
+                            <li>
+                                <a href="student-experience/internationals">International Students</a>
+                            </li>
+                        
+                            <li>
+                                <a href="student-experience/employability">Employability</a>
+                            </li>
+                        
+                            <li>
+                                <a href="student-experience/careers">Careers</a>
+                            </li>
+                        
+                            <li>
+                                <a href="student-experience/learning-environment">Learning Environment</a>
+                            </li>
+                        
+                            <li>
+                                <a href="student-experience/student-testimonials">Student Testimonials</a>
+                            </li>
+                        
+                            </ul>
+                        
+                </div>
+            </li>
+        
+            <li class='trigger'>
+                <a class="&lt;%# DataBinder.Eval(Container.DataItem, &quot;CssStyle&quot;) %> FirstLevelMenu" href="contact">Contact</a>
+                <div class="SecondaryContainer">
+                    
+
+                            <ul class="menusecondlevel">
+                        
+                            <li>
+                                <a href="about-dbs/contact-us">Contact Information</a>
+                            </li>
+                        
+                            <li>
+                                <a href="about-dbs/location">DBS Locations</a>
+                            </li>
+                        
+                            <li>
+                                <a href="contact/order-a-prospectus">Order a Prospectus</a>
+                            </li>
+                        
+                            <li>
+                                <a href="contact-dbs/visit-dbs">Visit DBS</a>
+                            </li>
+                        
+                            </ul>
+                        
+                    
+                </div>
+            </li>
+        
+            <li class=''>
+                <a class="&lt;%# DataBinder.Eval(Container.DataItem, &quot;CssStyle&quot;) %> FirstLevelMenu" href="enquiry/enquire-online">Enquiry</a>
+                <div class="SecondaryContainer">
+                    
+
+                            <ul class="menusecondlevel">
+                        
+                            <li>
+                                <a class="NavHeaderTopMenu">ENQUIRY</a>
+                            </li>
+                        
+                            </ul>
+                        
+                    
+                </div>
+            </li>
+        
+            <li class=''>
+                <a class="&lt;%# DataBinder.Eval(Container.DataItem, &quot;CssStyle&quot;) %> FirstLevelMenu" href="application-form">Apply</a>
+                <div class="SecondaryContainer">
+                    
+
+                            <ul class="menusecondlevel">
+                        
+                            <li>
+                                <a class="NavHeaderTopMenu">APPLY</a>
+                            </li>
+                        
+                            </ul>
+                        
+                    
+                </div>
+            </li>
+        
+                <li class='mobileOnly'>
+                <a href="http://dbs-students.com">Current Students</a>
+                <a href="/about-dbs/for-employers">Corporate Services</a>
+                <a href="https://library.dbs.ie/">DBS Library</a>
+                <a href="/news-events/">News & Events</a>
+                <a href="/International-students">International Students</a>
+                </li>
+            </ul>
+            <div id="searchIconMag" class="searchDiv"></div>
+            </div>
+        
+</div>
+
+        
+        </div>
+    </div>
+</div>
+
+            
+        </div>
+    </div>
+</div>
+            
+        </div>
+    </div>
+</div><div class="sf_cols TopBanner">
+    <div class="sf_colsOut sf_1col_1_100">
+        <div id="ContentPlaceHolder1_TB6148D1A002_Col00" class="sf_colsIn sf_1col_1in_100"><div class="sf_cols InnerWrapper">
+    <div style="" class="sf_colsOut sf_1col_1_100">
+        <div id="ContentPlaceHolder1_TB6148D1A004_Col00" class="sf_colsIn sf_1col_1in_100"><div class='sfContentBlock'><h1 class="CoursesCourseType"></h1>
+
+
+</div><div class='sfContentBlock'><h1 class="bannerH1"></h1>
+
+
+</div>
+            
+        </div>
+    </div>
+</div>
+            
+        </div>
+    </div>
+</div><div class="sf_cols CourseSearch DBS_LightGray">
+    <div style="" class="sf_colsOut sf_1col_1_100">
+        <div id="ContentPlaceHolder1_TB6148D1A005_Col00" class="sf_colsIn sf_1col_1in_100"><div class="sf_cols InnerWrapper CourseSearchDiv">
+    <div style="width: 100%;" class="sf_colsOut sf_1col_1_100">
+        <div id="ContentPlaceHolder1_TB6148D1A017_Col00" class="sf_colsIn sf_1col_1in_100">
+            
+        </div>
+    </div>
+</div>
+            
+        </div>
+    </div>
+</div><div class="sf_cols">
+    <div class="sf_colsOut sf_1col_1_100">
+        <div id="ContentPlaceHolder1_TB6148D1A015_Col00" class="sf_colsIn sf_1col_1in_100"><div class="sf_cols InnerWrapper  MobileWrapper">
+    <div class="sf_colsOut sf_1col_1_100">
+        <div id="ContentPlaceHolder1_TB6148D1A018_Col00" class="sf_colsIn sf_1col_1in_100">
+<script src="/Javascript/jssor.slider.min.js"></script>
+
+<script>
+    jQuery(document).ready(function ($) {
+        
+        var options = {
+            $AutoPlay: true,
+            $AutoPlayInterval: 8000,              
+            $HWA: false,
+            $SlideDuration: 2000,
+            $BulletNavigatorOptions: {
+                $Class: $JssorBulletNavigator$,
+                $ChanceToShow: 2
+            }
+        };
+        var jssor_slider1 = new $JssorSlider$('slider1_container', options);
+    });
+</script>
+
+<div id="slider1_container" style="position: relative; top: 20px; left: 0px; width: 1020px; height: 350px;overflow:hidden;">
+    <div u="slides" style="cursor:default;position:relative;top:0px;left:0px;width: 1020px;height: 350px;overflow:hidden;">
+        
+                <div>
+                    <div class="inner">&nbsp;</div>
+<div class="slider-details">
+<h2 class="slider-title">International Students</h2>
+<p class="slider-text">We welcome students from around the world to join<br>
+an enriching academic experience in Dublin City.
+</p>
+<p><a class="slider-link" href="http://www.dbs.ie/international-students/international-non-eu-students/overview-for-international-students">Find out more</a></p>
+<div class="slider-image"><img src="/images/default-source/default-album/banner1.jpg?sfvrsn=e8aba3e9_4" data-displaymode="Original" alt="Banner1" title="Banner1"></div>
+</div>
+                </div>
+            
+                <div>
+                    <div class="inner">&nbsp;</div>
+<div class="slider-details">
+<h2 class="slider-title">Non-EU Students</h2>
+<p class="slider-text">We welcome students from all around the world to join an enriching academic experience in Ireland.
+</p>
+<p><a class="slider-link" href="http://www.dbs.ie/international-students/international-non-eu-students/overview-for-international-students">Find out more</a></p>
+<div class="slider-image"><img src="/images/default-source/default-album/banner2.jpg?sfvrsn=e4aba3e9_4" data-displaymode="Original" alt="Banner2" title="Banner2">
+</div>
+</div>
+                </div>
+            
+                <div>
+                    <div class="inner">&nbsp;</div>
+<div class="slider-details">
+<h2 class="slider-title">European Students</h2>
+<p class="slider-text">We welcome students from Europe&nbsp;to join an enriching academic experience in Ireland.
+</p>
+<p><a class="slider-link" href="http://www.dbs.ie/international-students/european-students/european-students-requirements">Find out more</a></p>
+<div class="slider-image"><img src="/images/default-source/default-album/banner3.jpg?sfvrsn=9baba3e9_4" data-displaymode="Original" alt="Banner3" title="Banner3"></div>
+</div>
+                </div>
+            
+                <div>
+                    <div class="inner">&nbsp;</div>
+<div class="slider-details">
+<h2 class="slider-title">USA Study Abroad</h2>
+<p class="slider-text">DBS offers a 16 week programme for US students who want to know more about Ireland
+</p>
+<p><a class="slider-link" href="http://www.dbs.ie/international-students/us-study-abroad/study-abroad-programs">Find out more</a></p>
+<div class="slider-image"><img src="/images/default-source/default-album/banner4.jpg?sfvrsn=93aba3e9_6" data-displaymode="Original" alt="Banner4" title="Banner4"></div>
+</div>
+                </div>
+            
+    </div>
+    <script>
+        $( document ).ready(function() {
+            document.getElementById("sliderVideo").setAttribute('autoplay', true);
+            var vid = document.getElementById("sliderVideo");
+            setToMuted(vid);
+            function setToMuted() { 
+                vid.defaultMuted = true;
+                
+                if (vid.ended || vid.paused) {
+                    vid.play();
+                }
+            }
+            
+            setTimeout(function() {
+                vid.play();
+            }, 0);
+            console.log("Video muted (T/F)?: " + vid.defaultMuted);
+        });
+    </script>
+    <style>
+        .jssorb05
+        {
+            position: absolute;
+            bottom: 5px;
+            right: 200px;
+        }
+
+            .jssorb05 div, .jssorb05 div:hover, .jssorb05 .av
+            {
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                background: url("/ImageLibrary/b05.png") no-repeat;
+                overflow: hidden;
+                cursor: pointer;
+            }
+
+            .jssorb05 div {
+                -ms-background-position: -7px -7px;
+                background-position: -7px -7px;
+            }
+
+        .jssorb05 div:hover, .jssorb05 .av:hover {
+                    -ms-background-position: -37px -7px;
+                    background-position: -37px -7px;
+                }
+
+        .jssorb05 .av {
+                -ms-background-position: -67px -7px;
+                background-position: -67px -7px;
+            }
+
+        .jssorb05 .dn, .jssorb05 .dn:hover {
+                -ms-background-position: -97px -7px;
+                background-position: -97px -7px;
+            }
+    </style>
+    <div u="navigator" class="jssorb05">
+        <div u="prototype"></div>
+    </div>
+</div>
+
+<div class='sfContentBlock'><h1 style="text-align:center;" class="question-student-type">What type of student are you?</h1>
+
+
+</div>
+
+<ul class="VideoTabList InnerWrapper">
+    
+            <li class='non-eu-student'>Non-EU Student</li>
+        
+            <li class='general'>General</li>
+        
+            <li class='usa-study-abroad'>USA Study Abroad</li>
+        
+            <li class='eu-student'>EU Student</li>
+        
+</ul>
+
+<div class="VideoItemWrapper">
+    
+            <div class='VideoItem  Accommodation general general'>
+
+                <div class="VideoItemContainer">
+                    <a id="ContentPlaceHolder1_C004_rpt_Video_HyperLink1_0" href="/international-students/international-accommodation">
+                        <div class="MediaContainer">
+                            <img id="ContentPlaceHolder1_C004_rpt_Video_img_Img_0" src="https://www.dbs.ie/images/default-source/dbs-website-images/Accommodation.jpg?sfvrsn=6901a3e9_6">
+                        </div>
+                        <div class="videoContent">
+                            <h3>Accommodation</h3>
+                            <p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        
+            <div class='VideoItem  International-Programmes non-eu-student non-eu-student'>
+
+                <div class="VideoItemContainer">
+                    <a id="ContentPlaceHolder1_C004_rpt_Video_HyperLink1_1" href="/international-students/international-non-eu-students/international-programmes">
+                        <div class="MediaContainer">
+                            <img id="ContentPlaceHolder1_C004_rpt_Video_img_Img_1" src="https://www.dbs.ie/images/default-source/international-non-eu/International-Programmes.jpg?sfvrsn=491ba3e9_12">
+                        </div>
+                        <div class="videoContent">
+                            <h3>Programmes for International Students</h3>
+                            <p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        
+            <div class='VideoItem  Studying-in-Ireland general general'>
+
+                <div class="VideoItemContainer">
+                    <a id="ContentPlaceHolder1_C004_rpt_Video_HyperLink1_2" href="/international-students/why-dbs">
+                        <div class="MediaContainer">
+                            <img id="ContentPlaceHolder1_C004_rpt_Video_img_Img_2" src="https://www.dbs.ie/images/default-source/default-album/Studying-in-Ireland.jpg?sfvrsn=44a5a3e9_25">
+                        </div>
+                        <div class="videoContent">
+                            <h3>Studying in Ireland</h3>
+                            <p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        
+            <div class='VideoItem  US-Study-Abroad-Overview usa-study-abroad usa-study-abroad'>
+
+                <div class="VideoItemContainer">
+                    <a id="ContentPlaceHolder1_C004_rpt_Video_HyperLink1_3" href="/international-students/us-study-abroad/overview">
+                        <div class="MediaContainer">
+                            <img id="ContentPlaceHolder1_C004_rpt_Video_img_Img_3" src="https://www.dbs.ie/images/default-source/us-study-abroad-images/US-Study-Abroad-Overview.jpg?sfvrsn=f51aa3e9_8">
+                        </div>
+                        <div class="videoContent">
+                            <h3>Overview</h3>
+                            <p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        
+            <div class='VideoItem  Studying-in-Ireland non-eu-student non-eu-student'>
+
+                <div class="VideoItemContainer">
+                    <a id="ContentPlaceHolder1_C004_rpt_Video_HyperLink1_4" href="/international-students/international-non-eu-students/studying-in-ireland-for-international-students">
+                        <div class="MediaContainer">
+                            <img id="ContentPlaceHolder1_C004_rpt_Video_img_Img_4" src="https://www.dbs.ie/images/default-source/international-non-eu/Studying-in-Ireland.jpg?sfvrsn=8e1ba3e9_9">
+                        </div>
+                        <div class="videoContent">
+                            <h3>Studying in Ireland</h3>
+                            <p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        
+            <div class='VideoItem  One-Semester-Option eu-student eu-student'>
+
+                <div class="VideoItemContainer">
+                    <a id="ContentPlaceHolder1_C004_rpt_Video_HyperLink1_5" href="/international-students/european-students/one-semester-options">
+                        <div class="MediaContainer">
+                            <img id="ContentPlaceHolder1_C004_rpt_Video_img_Img_5" src="https://www.dbs.ie/images/default-source/european/One-Semester-Option.jpg?sfvrsn=c71fa3e9_12">
+                        </div>
+                        <div class="videoContent">
+                            <h3>One Semester Option</h3>
+                            <p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        
+            <div class='VideoItem  international2 general general'>
+
+                <div class="VideoItemContainer">
+                    <a id="ContentPlaceHolder1_C004_rpt_Video_HyperLink1_6" href="/international-students/why-dbs">
+                        <div class="MediaContainer">
+                            <img id="ContentPlaceHolder1_C004_rpt_Video_img_Img_6" src="https://www.dbs.ie/images/default-source/default-album/international2.jpg?sfvrsn=a8a4a3e9_11">
+                        </div>
+                        <div class="videoContent">
+                            <h3>Why Choose DBS</h3>
+                            <p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        
+            <div class='VideoItem  Information-on-Ireland usa-study-abroad usa-study-abroad'>
+
+                <div class="VideoItemContainer">
+                    <a id="ContentPlaceHolder1_C004_rpt_Video_HyperLink1_7" href="/international-students/us-study-abroad/studying-in-ireland">
+                        <div class="MediaContainer">
+                            <img id="ContentPlaceHolder1_C004_rpt_Video_img_Img_7" src="https://www.dbs.ie/images/default-source/us-study-abroad-images/Information-on-Ireland.jpg?sfvrsn=e51aa3e9_8">
+                        </div>
+                        <div class="videoContent">
+                            <h3>Information on Ireland</h3>
+                            <p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        
+            <div class='VideoItem  Non-EU-Overview non-eu-student non-eu-student'>
+
+                <div class="VideoItemContainer">
+                    <a id="ContentPlaceHolder1_C004_rpt_Video_HyperLink1_8" href="/international-students/international-non-eu-students/overview-for-international-students">
+                        <div class="MediaContainer">
+                            <img id="ContentPlaceHolder1_C004_rpt_Video_img_Img_8" src="https://www.dbs.ie/images/default-source/international-non-eu/Non-EU-Overview.jpg?sfvrsn=8d1ba3e9_11">
+                        </div>
+                        <div class="videoContent">
+                            <h3>Overview</h3>
+                            <p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        
+            <div class='VideoItem  Two-Semester-Option eu-student eu-student'>
+
+                <div class="VideoItemContainer">
+                    <a id="ContentPlaceHolder1_C004_rpt_Video_HyperLink1_9" href="/international-students/european-students/two-semester-options">
+                        <div class="MediaContainer">
+                            <img id="ContentPlaceHolder1_C004_rpt_Video_img_Img_9" src="https://www.dbs.ie/images/default-source/european/Two-Semester-Option.jpg?sfvrsn=c61fa3e9_12">
+                        </div>
+                        <div class="videoContent">
+                            <h3>Two Semester Option</h3>
+                            <p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        
+            <div class='VideoItem  Us-Study-Abroad-Accommodation usa-study-abroad usa-study-abroad'>
+
+                <div class="VideoItemContainer">
+                    <a id="ContentPlaceHolder1_C004_rpt_Video_HyperLink1_10" href="http://www.dbs.ie/international-students/us-study-abroad/accommodation-for-us-students">
+                        <div class="MediaContainer">
+                            <img id="ContentPlaceHolder1_C004_rpt_Video_img_Img_10" src="https://www.dbs.ie/images/default-source/us-study-abroad-images/Us-Study-Abroad-Accommodation.jpg?sfvrsn=e01aa3e9_14">
+                        </div>
+                        <div class="videoContent">
+                            <h3>Accommodation</h3>
+                            <p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        
+            <div class='VideoItem  NonEU-Visa-Information non-eu-student non-eu-student'>
+
+                <div class="VideoItemContainer">
+                    <a id="ContentPlaceHolder1_C004_rpt_Video_HyperLink1_11" href="/international-students/international-non-eu-students/visa-information">
+                        <div class="MediaContainer">
+                            <img id="ContentPlaceHolder1_C004_rpt_Video_img_Img_11" src="https://www.dbs.ie/images/default-source/international-non-eu/NonEU-Visa-Information.jpg?sfvrsn=4a1ba3e9_12">
+                        </div>
+                        <div class="videoContent">
+                            <h3>Visa Information</h3>
+                            <p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        
+            <div class='VideoItem  How-to-Apply eu-student eu-student'>
+
+                <div class="VideoItemContainer">
+                    <a id="ContentPlaceHolder1_C004_rpt_Video_HyperLink1_12" href="/international-students/european-students/how-to-apply">
+                        <div class="MediaContainer">
+                            <img id="ContentPlaceHolder1_C004_rpt_Video_img_Img_12" src="https://www.dbs.ie/images/default-source/default-album/How-to-Apply.png?sfvrsn=45a5a3e9_18">
+                        </div>
+                        <div class="videoContent">
+                            <h3>How To Apply</h3>
+                            <p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        
+            <div class='VideoItem  Us-Study-Abroad-Programs usa-study-abroad usa-study-abroad'>
+
+                <div class="VideoItemContainer">
+                    <a id="ContentPlaceHolder1_C004_rpt_Video_HyperLink1_13" href="/international-students/us-study-abroad/study-abroad-programs">
+                        <div class="MediaContainer">
+                            <img id="ContentPlaceHolder1_C004_rpt_Video_img_Img_13" src="https://www.dbs.ie/images/default-source/us-study-abroad-images/Us-Study-Abroad-Programs.jpg?sfvrsn=e71aa3e9_9">
+                        </div>
+                        <div class="videoContent">
+                            <h3>Programs</h3>
+                            <p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        
+            <div class='VideoItem  Fees-for-International-Students non-eu-student non-eu-student'>
+
+                <div class="VideoItemContainer">
+                    <a id="ContentPlaceHolder1_C004_rpt_Video_HyperLink1_14" href="/international-students/international-non-eu-students/international-fees">
+                        <div class="MediaContainer">
+                            <img id="ContentPlaceHolder1_C004_rpt_Video_img_Img_14" src="https://www.dbs.ie/images/default-source/international-non-eu/fees-for-international-students.jpg?sfvrsn=8c1ba3e9_8">
+                        </div>
+                        <div class="videoContent">
+                            <h3>Fees for International Students</h3>
+                            <p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        
+            <div class='VideoItem  European-Student-Requirements eu-student eu-student'>
+
+                <div class="VideoItemContainer">
+                    <a id="ContentPlaceHolder1_C004_rpt_Video_HyperLink1_15" href="/international-students/european-students/european-students-requirements">
+                        <div class="MediaContainer">
+                            <img id="ContentPlaceHolder1_C004_rpt_Video_img_Img_15" src="https://www.dbs.ie/images/default-source/dbs-website-images/European-Student-Requirements.jpg?sfvrsn=a024a3e9_6">
+                        </div>
+                        <div class="videoContent">
+                            <h3>European Student Requirements </h3>
+                            <p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        
+            <div class='VideoItem  international5 general general'>
+
+                <div class="VideoItemContainer">
+                    <a id="ContentPlaceHolder1_C004_rpt_Video_HyperLink1_16" href="/international-students/english-language-requirements">
+                        <div class="MediaContainer">
+                            <img id="ContentPlaceHolder1_C004_rpt_Video_img_Img_16" src="https://www.dbs.ie/images/default-source/default-album/international5.jpg?sfvrsn=4aa5a3e9_16">
+                        </div>
+                        <div class="videoContent">
+                            <h3>English Requirements</h3>
+                            <p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        
+            <div class='VideoItem  english-language-requirement eu-student eu-student'>
+
+                <div class="VideoItemContainer">
+                    <a id="ContentPlaceHolder1_C004_rpt_Video_HyperLink1_17" href="/international-students/european-students/english-language-requirements-for-eu-students">
+                        <div class="MediaContainer">
+                            <img id="ContentPlaceHolder1_C004_rpt_Video_img_Img_17" src="https://www.dbs.ie/images/default-source/european/english-language-requirement.jpg?sfvrsn=f830a2e9_4">
+                        </div>
+                        <div class="videoContent">
+                            <h3>English Language Requirements</h3>
+                            <p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        
+            <div class='VideoItem  Life-in-Dublin usa-study-abroad usa-study-abroad'>
+
+                <div class="VideoItemContainer">
+                    <a id="ContentPlaceHolder1_C004_rpt_Video_HyperLink1_18" href="/international-students/us-study-abroad/life-in-dublin">
+                        <div class="MediaContainer">
+                            <img id="ContentPlaceHolder1_C004_rpt_Video_img_Img_18" src="https://www.dbs.ie/images/default-source/us-study-abroad-images/Life-in-Dublin.jpg?sfvrsn=e61aa3e9_8">
+                        </div>
+                        <div class="videoContent">
+                            <h3>Life in Dublin</h3>
+                            <p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        
+            <div class='VideoItem  NonEU-Accommodation non-eu-student non-eu-student'>
+
+                <div class="VideoItemContainer">
+                    <a id="ContentPlaceHolder1_C004_rpt_Video_HyperLink1_19" href="/international-students/international-non-eu-students/accommodation">
+                        <div class="MediaContainer">
+                            <img id="ContentPlaceHolder1_C004_rpt_Video_img_Img_19" src="https://www.dbs.ie/images/default-source/international-non-eu/NonEU-Accommodation.jpg?sfvrsn=881ba3e9_8">
+                        </div>
+                        <div class="videoContent">
+                            <h3>Accommodation</h3>
+                            <p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        
+            <div class='VideoItem  US-Summer-Program usa-study-abroad usa-study-abroad'>
+
+                <div class="VideoItemContainer">
+                    <a id="ContentPlaceHolder1_C004_rpt_Video_HyperLink1_20" href="/international-students/us-study-abroad/us-summer-program">
+                        <div class="MediaContainer">
+                            <img id="ContentPlaceHolder1_C004_rpt_Video_img_Img_20" src="https://www.dbs.ie/images/default-source/us-study-abroad-images/US-Summer-Program.jpg?sfvrsn=f61aa3e9_8">
+                        </div>
+                        <div class="videoContent">
+                            <h3>US Summer Program</h3>
+                            <p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        
+            <div class='VideoItem  NonEU-English-Language-Requirements non-eu-student non-eu-student'>
+
+                <div class="VideoItemContainer">
+                    <a id="ContentPlaceHolder1_C004_rpt_Video_HyperLink1_21" href="/international-students/international-non-eu-students/english-language-requirements-for-international-students">
+                        <div class="MediaContainer">
+                            <img id="ContentPlaceHolder1_C004_rpt_Video_img_Img_21" src="https://www.dbs.ie/images/default-source/international-non-eu/NonEU-English-Language-Requirements.jpg?sfvrsn=8f1ba3e9_9">
+                        </div>
+                        <div class="videoContent">
+                            <h3>English Language Requirements</h3>
+                            <p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        
+            <div class='VideoItem  EU-Accommodation eu-student eu-student'>
+
+                <div class="VideoItemContainer">
+                    <a id="ContentPlaceHolder1_C004_rpt_Video_HyperLink1_22" href="/international-students/european-students/accommodation-for-eu-students">
+                        <div class="MediaContainer">
+                            <img id="ContentPlaceHolder1_C004_rpt_Video_img_Img_22" src="https://www.dbs.ie/images/default-source/european/EU-Accommodation.jpg?sfvrsn=4e1ea3e9_8">
+                        </div>
+                        <div class="videoContent">
+                            <h3>Accommodation</h3>
+                            <p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        
+            <div class='VideoItem  NonEU-International-Agents non-eu-student non-eu-student'>
+
+                <div class="VideoItemContainer">
+                    <a id="ContentPlaceHolder1_C004_rpt_Video_HyperLink1_23" href="/international-students/international-non-eu-students/international-agents">
+                        <div class="MediaContainer">
+                            <img id="ContentPlaceHolder1_C004_rpt_Video_img_Img_23" src="https://www.dbs.ie/images/default-source/international-non-eu/NonEU-International-Agents.jpg?sfvrsn=841ba3e9_11">
+                        </div>
+                        <div class="videoContent">
+                            <h3>International at DBS</h3>
+                            <p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        
+            <div class='VideoItem  international3 general general eu-student eu-student'>
+
+                <div class="VideoItemContainer">
+                    <a id="ContentPlaceHolder1_C004_rpt_Video_HyperLink1_24" href="/international-students/european-students/european-partners">
+                        <div class="MediaContainer">
+                            <img id="ContentPlaceHolder1_C004_rpt_Video_img_Img_24" src="https://www.dbs.ie/images/default-source/default-album/international3.jpg?sfvrsn=afa4a3e9_20">
+                        </div>
+                        <div class="videoContent">
+                            <h3>European Partners</h3>
+                            <p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        
+            <div class='VideoItem  Tuition-Fees general general'>
+
+                <div class="VideoItemContainer">
+                    <a id="ContentPlaceHolder1_C004_rpt_Video_HyperLink1_25" href="/international-students/international-non-eu-students/international-fees">
+                        <div class="MediaContainer">
+                            <img id="ContentPlaceHolder1_C004_rpt_Video_img_Img_25" src="https://www.dbs.ie/images/default-source/default-album/Tuition-Fees.jpg?sfvrsn=46a5a3e9_18">
+                        </div>
+                        <div class="videoContent">
+                            <h3>Tuition Fees</h3>
+                            <p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        
+            <div class='VideoItem  European-Tuition-Fees eu-student eu-student'>
+
+                <div class="VideoItemContainer">
+                    <a id="ContentPlaceHolder1_C004_rpt_Video_HyperLink1_26" href="/international-students/european-students/tuition-fees">
+                        <div class="MediaContainer">
+                            <img id="ContentPlaceHolder1_C004_rpt_Video_img_Img_26" src="https://www.dbs.ie/images/default-source/european/european-tuition-fees.jpg?sfvrsn=1a20a3e9_8">
+                        </div>
+                        <div class="videoContent">
+                            <h3>Tuition Fees</h3>
+                            <p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        
+</div>
+<script>
+    $(document).ready(function () {
+        $(".VideoTabList").find("li").first().addClass("tabselected");
+        var isgeneral = false;
+        $(".VideoTabList > li").each(function () {
+            if ($(this).hasClass("general")) {
+                isgeneral = true;
+            }
+        });
+
+        if (isgeneral) {
+            $(".VideoTabList > li").each(function () {
+                if ($(this).hasClass("general")) {
+                    $(this).addClass("tabselected");
+                }
+                else {
+                    $(this).removeClass("tabselected");
+                }
+            });
+        }
+
+        var className = $(".VideoTabList").find(".tabselected").first().attr('class');
+        var classItem = className.split(" ")[0];
+        $(".VideoItem").each(function () {
+            if ($(this).hasClass(classItem)) {
+                $(this).show();
+            }
+            else {
+                $(this).hide();
+            }
+        });
+
+    });
+
+    $(".VideoTabList > li").click(function () {
+        $(".VideoTabList > li").each(function () {
+            $(this).removeClass("tabselected");
+        });
+        var classItem = $(this).attr('class');
+        $(this).addClass("tabselected");
+        $(".VideoItem").each(function () {
+            if ($(this).hasClass(classItem)) {
+                $(this).show();
+                $(this).addClass("showingVideoItem");
+            }
+            else {
+                $(this).hide();
+                $(this).removeClass("showingVideoItem");
+            }
+        });
+    });
+</script>
+<div class="sf_cols">
+    <div class="sf_colsOut sf_2cols_1_50">
+        <div id="ContentPlaceHolder1_C014_Col00" class="sf_colsIn sf_2cols_1in_50">
+            
+        </div>
+    </div>
+    <div class="sf_colsOut sf_2cols_2_50">
+        <div id="ContentPlaceHolder1_C014_Col01" class="sf_colsIn sf_2cols_2in_50">            
+        </div>
+    </div>
+</div><div class="sf_cols">
+    <div class="sf_colsOut sf_3cols_1_33">
+        <div id="ContentPlaceHolder1_C011_Col00" class="sf_colsIn sf_3cols_1in_33"><div class='sfContentBlock'><h5>From India to DBS</h5>
+<iframe width="100%" height="250px" src="https://www.youtube.com/embed/8T3xN7unkTk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe><br>
+<p>DBS students from India describe their experiences at the college and why they decided to study at DBS.</p>
+
+
+</div>
+            
+        </div>
+    </div>
+    <div class="sf_colsOut sf_3cols_2_34">
+        <div id="ContentPlaceHolder1_C011_Col01" class="sf_colsIn sf_3cols_2in_34"><div class='sfContentBlock'><h5>From Latin America to DBS</h5>
+<iframe width="100%" height="250px" src="https://www.youtube.com/embed/xE-huBSkxZ4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe><br>
+<p>DBS students from Latin American countries tell us about the DBS student experience and living in Ireland.</p>
+
+
+</div>
+            
+        </div>
+    </div>
+    <div class="sf_colsOut sf_3cols_3_33">
+        <div id="ContentPlaceHolder1_C011_Col02" class="sf_colsIn sf_3cols_3in_33"><div class='sfContentBlock'><h5>From Nigeria to DBS</h5>
+<iframe width="100%" height="250px" src="https://www.youtube.com/embed/o5qEtQniz4E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe><br>
+<p>DBS students from Nigeria describe their experiences at the college and why they decided to study at DBS.</p>
+
+
+</div>
+            
+        </div>
+    </div>
+</div><div class="sf_cols">
+    <div class="sf_colsOut sf_3cols_1_33">
+        <div id="ContentPlaceHolder1_C016_Col00" class="sf_colsIn sf_3cols_1in_33"><div class='sfContentBlock'><h5>Student testimonials</h5>
+<iframe width="100%" height="250px" src="https://www.youtube.com/embed/02tLC1L_fUE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe><br>
+<p>Hear from some of our International and Irish students, learn about why they chose to study at DBS.</p>
+
+
+</div>
+            
+        </div>
+    </div>
+    <div class="sf_colsOut sf_3cols_2_34">
+        <div id="ContentPlaceHolder1_C016_Col01" class="sf_colsIn sf_3cols_2in_34"><div class='sfContentBlock'><h5>From China to DBS</h5>
+<iframe width="100%" height="250px" src="https://www.youtube.com/embed/OXjXsC4QIdw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe><br>
+<p>DBS students from China describe their experiences at the college and why they decided to study at DBS.</p>
+
+
+</div>
+            
+        </div>
+    </div>
+    <div class="sf_colsOut sf_3cols_3_33">
+        <div id="ContentPlaceHolder1_C016_Col02" class="sf_colsIn sf_3cols_3in_33"><div class='sfContentBlock'><h5>MBA at DBS - Varsha Ann Jacob</h5>
+<iframe width="100%" height="250px" src="https://www.youtube.com/embed/AjwhlowvZM4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe><br>
+<p>DBS MBA student Varsha Ann Jacob talks about her experiences studying the MBA at DBS.</p>
+
+
+</div>
+            
+        </div>
+    </div>
+</div>
+            
+        </div>
+    </div>
+</div>
+            
+        </div>
+    </div>
+</div><div class="sf_cols Footer DBS_Gray">
+    <div style="" class="sf_colsOut sf_1col_1_100">
+        <div id="ContentPlaceHolder1_TB6148D1A016_Col00" class="sf_colsIn sf_1col_1in_100"><div class="sf_cols InnerWrapper">
+    <div style="width: 100%;" class="sf_colsOut sf_1col_1_100">
+        <div id="ContentPlaceHolder1_TB6148D1A019_Col00" class="sf_colsIn sf_1col_1in_100"><div class="sf_cols">
+    <div class="sf_colsOut sf_4cols_1_25 Footer_About">
+        <div id="ContentPlaceHolder1_TB6148D1A025_Col00" class="sf_colsIn sf_4cols_1in_25"><div class='sfContentBlock Footer_Header'><p><strong>ABOUT DBS</strong></p>
+
+
+</div>
+
+
+
+
+<div class="sfNavWrp sfNavVerticalWrp FooterContent">
+    
+    
+
+<a id="ContentPlaceHolder1_TB6148D1A034_ctl00_ctl00_ctl01_ctl00_ctl00_toggleAnchor" class="sfNavToggle">Menu</a>
+
+<script type="text/javascript">
+    (function ($) {
+        $($get('ContentPlaceHolder1_TB6148D1A034_ctl00_ctl00_ctl01_ctl00_ctl00_toggleAnchor')).click(function () {
+            $(this).closest(".sfNavWrp").find(".sfNavList").toggleClass("sfShown");
+        });
+    })(jQuery);
+</script>
+    
+    
+
+    <ul class="sfNavVertical sfNavList">
+        
+                            <li>
+                                <a href="/about-dbs/welcome">Welcome to Dublin Business School</a>          
+                            </li>
+                         
+                            <li>
+                                <a href="/about-dbs/history-of-dbs">History of DBS</a>          
+                            </li>
+                         
+                            <li>
+                                <a href="/about-dbs/academic-schools-staff">Academic School &amp; Staff</a>          
+                            </li>
+                         
+                            <li>
+                                <a href="/about-dbs/recognition-and-accreditation">Recognition &amp; Accreditation</a>          
+                            </li>
+                         
+                            <li>
+                                <a href="/advantage">DBS Advantage</a>          
+                            </li>
+                         
+                            <li>
+                                <a href="/about-dbs/for-employers">For Employers</a>          
+                            </li>
+                         
+                            <li>
+                                <a href="/about-dbs/for-guidance-counsellors">For Guidance Counsellors</a>          
+                            </li>
+                         
+                            <li>
+                                <a href="/about-dbs/kaplan-dublin-business-school">Kaplan businesses</a>          
+                            </li>
+                         
+                            <li>
+                                <a href="/about-dbs/jobs-dublin-business-school">Vacancies</a>          
+                            </li>
+                         
+                            <li>
+                                <a href="/about-dbs/hetac-institutional-review">HETAC Institutional Review</a>          
+                            </li>
+                         
+                            <li>
+                                <a href="/about-dbs/new-programmes-at-dbs">New programmes at DBS</a>          
+                            </li>
+                         
+                            <li>
+                                <a href="/about-dbs/dbs-esource">DBS eSource</a>          
+                            </li>
+                         
+                            <li>
+                                <a href="/about-dbs/why-dbs">Why DBS</a>          
+                            </li>
+                         
+    </ul>
+</div>
+<div class='sfContentBlock FooterContent'><li><a href="/international-students">International Students</a></li>
+<li>
+<a href="/terms-and-conditions">Terms and Conditions</a>
+</li>
+<li>
+<a href="/privacy-policy">Privacy Policy</a></li>
+<li><a href="/cookie-policy">Cookie Policy</a></li>
+<li>
+<a href="/company-registration-details">Company Registration Details</a>
+</li>
+<li>
+<a href="http://www.dbs.ie/course/online-courses">DBX</a>
+</li>
+
+
+</div>
+            
+        </div>
+    </div>
+    <div class="sf_colsOut sf_4cols_2_25 Footer_DBS">
+        <div id="ContentPlaceHolder1_TB6148D1A025_Col01" class="sf_colsIn sf_4cols_2in_25"><div class='sfContentBlock Footer_Header'><p><strong>COURSES BY <U+200B>SUBJECT</strong></p>
+
+
+</div><div class='sfContentBlock FooterContent'><li><a href="http://www.dbs.ie/courses/accounting-and-finance">Accounting and Finance</a></li>
+<li><a href="http://www.dbs.ie/courses/arts">Arts</a></li>
+<li><a href="http://www.dbs.ie/courses/business-management">Business and Management</a></li>
+<li><a href="http://www.dbs.ie/courses/counselling-and-psychotherapy">Counselling and Psychotherapy</a></li>
+<li><a href="http://www.dbs.ie/courses/information-technology">Information Technology</a></li>
+<li><a href="http://www.dbs.ie/courses/law">Law</a></li>
+<li><a href="http://www.dbs.ie/courses/marketing-and-event-management">Marketing and Event Management</a></li>
+<li><a href="http://www.dbs.ie/courses/media-and-journalism">Media and Journalism</a></li>
+<li><a href="http://www.dbs.ie/courses/professional-accountancy">Professional Accountancy</a></li>
+<li><a href="http://www.dbs.ie/courses/psychology-social-science">Psychology and Social Science</a></li>
+
+
+</div>
+            
+        </div>
+    </div>
+    <div class="sf_colsOut sf_4cols_3_25 Footer_Student">
+        <div id="ContentPlaceHolder1_TB6148D1A025_Col02" class="sf_colsIn sf_4cols_3in_25"><div class='sfContentBlock Footer_Header'><p><strong>COURSES BY TYPE</strong></p>
+
+
+</div><div class='sfContentBlock FooterContent'><li><a href="http://www.dbs.ie/courses/evening-degree">Evening Degrees</a></li>
+<li><a href="http://www.dbs.ie/courses/full-time-undergraduate">Full-time Degrees / Certificates</a></li>
+<li><a href="http://www.dbs.ie/courses/ict-skills-programme">ICT Skills Programme</a></li>
+<li><a href="http://www.dbs.ie/courses/postgraduate">Postgraduate Courses</a> </li>
+<li><a href="http://www.dbs.ie/courses/professional-accountancy">Professional Accountancy</a></li>
+<li><a href="http://www.dbs.ie/courses/professional-evening-diploma">Professional Evening Diplomas</a></li>
+<li><a href="http://www.dbs.ie/courses/springboard">Springboard+</a></li>
+<li><a href="http://www.dbs.ie/course/online-courses">DBX Online Courses</a></li>
+
+
+</div><div class='sfContentBlock Footer_Header'><p><strong>STUDENT RESOURCES</strong></p>
+
+
+</div><div class='sfContentBlock  FooterContent'><li><a href="http://library.dbs.ie">DBS Library</a></li>
+<li><a href="/student-experience">Student Services</a></li>
+<li><a href="/student-experience/careers">Careers</a></li>
+<li><a href="http://students.dbs.ie/registrar-office">Registrar's office</a></li>
+<li><a href="http://students.dbs.ie/exams-office">Exam office</a></li>
+
+
+</div>
+            
+        </div>
+    </div>
+    <div class="sf_colsOut sf_4cols_4_25 Footer_Kaplan">
+        <div id="ContentPlaceHolder1_TB6148D1A025_Col03" class="sf_colsIn sf_4cols_4in_25"><div class='sfContentBlock Footer_Header'><p><strong>DUBLIN BUSINESS SCHOOL</strong></p>
+
+
+</div><div class='sfContentBlock FooterContent'><div class="FooterCol4" style="text-align: right;">
+13/14 Aungier Street,<br>
+Dublin 2,<br>
+Ireland.<br>
+<br>
+T: +353 1 417 7500<br>
+E: <a href="mailto:admissions@dbs.ie">admissions@dbs.ie</a><br>
+<br>
+<br>
+<img title="kaplan-logo-footer" alt="kaplan-logo-footer" src="/images/default-source/logos/kaplan-logo-footer.png?sfvrsn=1530a0e9_2" displaymode="Original" style="float: left;"><br>
+<br>
+&nbsp;DBS is part of KAPLAN INC.<br>
+provider of Education Services
+</div>
+
+
+</div><div class='sfContentBlock FooterContent'><div id="FooterIcons" style="float: right;">
+<a href="https://twitter.com/dbscollege" class="SocialTwitter" style="float: left; width: 40px; height: 40px; background: url('/images/default-source/social-icons/twitter.png?sfvrsn=8') 0% 0% repeat scroll transparent;"></a>
+<a href="https://www.facebook.com/DublinBusinessSchool" class="SocialFB" style="float: left; width: 40px; height: 40px; background: url('/images/default-source/social-icons/fb.png?sfvrsn=8') 0% 0% repeat scroll transparent;"></a>
+<a href="https://plus.google.com/104823954619043738289/about" class="SocialGP" style="float: left; width: 40px; height: 40px; background: url('/images/default-source/social-icons/gplus.png?sfvrsn=8') 0% 0% repeat scroll transparent;"></a>
+<a class="SocialInstagram" style="float: left; width: 40px; height: 40px; background: url('/images/default-source/social-icons/insta.png?sfvrsn=2') 0% 0% repeat scroll transparent;" href="https://instagram.com/dbscollege/"></a></div>
+
+
+</div>
+            
+        </div>
+    </div>
+</div><div class="sf_cols">
+    <div class="sf_colsOut sf_2cols_1_50">
+        <div id="ContentPlaceHolder1_TB6148D1A026_Col00" class="sf_colsIn sf_2cols_1in_50">
+            
+        </div>
+    </div>
+    <div class="sf_colsOut sf_2cols_2_50">
+        <div id="ContentPlaceHolder1_TB6148D1A026_Col01" class="sf_colsIn sf_2cols_2in_50"><div class='sfContentBlock  FooterCopyright FooterContent'><div style="float: right;">&copy; <span class="copy"></span>, Dublin Business School</div>
+
+
+</div>            
+        </div>
+    </div>
+</div>
+            
+        </div>
+    </div>
+</div>
+            
+        </div>
+    </div>
+</div>
+        </div>
+
+        <script>(function (i, s, o, g, r, a, m) {
+i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+(i[r].q = i[r].q || []).push(arguments)
+}, i[r].l = 1 * new Date(); a = s.createElement(o),
+m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+ga('create', 'UA-6683088-9', 'dbs.ie');
+ga('send', 'pageview');
+var $viewport = $('head meta[name="viewport"]');
+$viewport.attr('content', 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no');
+document.body.style.opacity = .9999;
+setTimeout(function () {
+document.body.style.opacity = 1;
+}, 1);
+</script>
+
+               
+        <script type="text/javascript">
+            $(function () {
+
+                var page = window.location.pathname;
+                var spliturl = [];
+                spliturl = page.split("/")
+
+                var currentPageUrlIs = spliturl[1];
+                var headerTitle;
+
+                switch (currentPageUrlIs) {
+
+                    case 'courses':
+                        $(".TopBanner").addClass("courses_banner");
+                        $(".TopBanner").removeClass("TopBanner");
+                        break;
+                    case 'about-dbs':
+
+                        $(".TopBanner").addClass("why-dbs_banner");
+                        $(".TopBanner").removeClass("TopBanner");
+
+                        headerTitle = 'About DBS';
+
+                        break;
+                    case 'contact-dbs':
+                        $(".TopBanner").addClass("contact_banner");
+                        $(".TopBanner").removeClass("TopBanner");
+                        headerTitle = 'Contact DBS';
+
+                        break;
+                    case 'student-experience':
+                        $(".TopBanner").addClass("student-experience_banner");
+                        $(".TopBanner").removeClass("TopBanner");
+
+                        headerTitle = 'Student Experience';
+
+                        break;
+                    case 'contact':
+                        $(".TopBanner").addClass("contact_banner");
+                        $(".TopBanner").removeClass("TopBanner");
+                        headerTitle = 'Contact';
+
+                        break;
+                    case 'news-and-events':
+                        $(".TopBanner").addClass("News-Events_banner");
+                        $(".TopBanner").removeClass("TopBanner");
+                        headerTitle = "News Events";
+                        break;
+                    case 'application-form':
+                        $(".TopBanner").addClass("apply_banner");
+                        $(".TopBanner").removeClass("TopBanner");
+                        headerTitle = "Apply";
+                        break;
+                    case 'dbs-online':
+                        $(".TopBanner").addClass("apply_banner");
+                        $(".TopBanner").removeClass("TopBanner");
+                        headerTitle = "DBS Online Courses";
+                        break;
+                    case 'enquirysubmitted':
+                        $(".TopBanner").addClass("TopBanner");
+                        headerTitle = "Enquiry Submitted";
+                        break;
+                    default:
+                        $(this).addClass("TopBanner");
+
+                        if (currentPageUrlIs != "course") {
+
+                            headerTitle = currentPageUrlIs;
+                        }
+                        else if (spliturl[2] == "online-courses") {
+                            headerTitle = "Our Online Courses";
+                        }
+
+                        if (headerTitle != null) {
+                            headerTitle = headerTitle.replace(/-/g, " ").replace(/\w\S*/g, function (txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); });
+                        }
+                        break;
+                }
+
+                if (headerTitle != null) {
+                    if (!$(".subjectAreaBC")[0] || spliturl[2] == "online-courses") {
+                        $(".bannerH1:eq(0)").html(headerTitle);
+                    }
+                }
+
+            });
+
+           
+
+            function showResMenu() {
+
+                $('.MainNavigation').css('display', 'block');
+
+            }
+        </script>
+
+        <script type="text/javascript" src="/Javascript/global.js"></script>
+         <!--	<span id="HostName">WEB01-CA-SVR01</span>-->
+    
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="298928EC">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+;(function() {
+                        function loadHandler() {
+                            var hf = $get('ctl08_TSSM');
+                            if (!hf._RSSM_init) { hf._RSSM_init = true; hf.value = ''; }
+                            hf.value += ';Telerik.Sitefinity.Resources, Version=10.2.6626.0, Culture=neutral, PublicKeyToken=b28c218413bdf563:en:75ec3a6b-4122-4e56-a1f4-58f0be0d90a0:7a90d6a;Telerik.Sitefinity.Resources, Version=10.2.6626.0, Culture=neutral, PublicKeyToken=b28c218413bdf563:en:75ec3a6b-4122-4e56-a1f4-58f0be0d90a0:83fa35c7';
+                            Sys.Application.remove_load(loadHandler);
+                        };
+                        Sys.Application.add_load(loadHandler);
+                    })();//]]>
+</script>
+</form>
+</body>
+</html>

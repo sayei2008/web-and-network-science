@@ -1,0 +1,1292 @@
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"f8f54eac9f","applicationID":"5961298","transactionName":"bgBTZRYCX0sAABVZW1dKdV4QLVRMIgwPREZWCV1UFkxiXQARAlh2Vh0eeAoHVEA=","queueTime":0,"applicationTime":178,"ttGuid":"1A14F0FA75D18CB3","agent":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script><title>
+	Student Testimonials
+</title>
+
+
+
+<link href="/StyleSheet/global.css" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet" type="text/css">
+    <!--[if lte IE 9]><link rel="stylesheet" href="/StyleSheet/ie9.css" type="text/css" /><![endif]-->
+    <!--[if lt IE 9]><link rel="stylesheet" href="/StyleSheet/ie8.css" type="text/css" /><![endif]-->
+    <meta property="og:type" content="website">
+    <!-- removed meta -->
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+w[l] = w[l] || []; w[l].push({
+'gtm.start':
+new Date().getTime(), event: 'gtm.js'
+}); var f = d.getElementsByTagName(s)[0],
+j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-WTGV6Q');
+</script>
+
+    <!-- End Google Tag Manager -->
+    <script>var _prum = [['id', '52d911a5abe53da00c000000'],
+['mark', 'firstbyte', (new Date()).getTime()]];
+(function () {
+var s = document.getElementsByTagName('script')[0]
+, p = document.createElement('script');
+p.async = 'async';
+p.src = '//rum-static.pingdom.net/prum.min.js';
+s.parentNode.insertBefore(p, s);
+})();
+</script>
+
+    <script src="/Javascript/jquery-3.3.1.min.js"></script>
+    
+<link href="../App_Themes/Content/CSS/Override.css" type="text/css" rel="stylesheet"><link href="https://d35islomi5rx1v.cloudfront.net/ajax/2017.3.913/SiteMap.css" type="text/css" rel="stylesheet" class="Telerik_stylesheet"><link href="https://d35islomi5rx1v.cloudfront.net/ajax/2017.3.913/Default/SiteMap.Default.css" type="text/css" rel="stylesheet" class="Telerik_stylesheet"><meta name="Generator" content="Sitefinity 10.2.6626.0 SE"><link rel="canonical" href="https://www.dbs.ie/student-experience/student-testimonials"><meta name="viewport" content="width=device-width, initial-scale=1.0"><script type="text/javascript">
+	(function() {var _rdDeviceWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;var _rdDeviceHeight = (window.innerHeight > 0) ? window.innerHeight : screen.height;var _rdOrientation = (window.width > window.height) ? 'landscape' : 'portrait';})();
+</script><link href="/Telerik.Web.UI.WebResource.axd?d=xXLWwJLoniotGGYycF401aHr8FKzDfXvKl1ZspUoAgb6kqMkAjv5KpYf9GPZFfRvITvyT5xMvm9pXqf4fAbXPpMeOX1002T8uIkmk0EiNZytqobfxrDJME9v2vKOyo3mdDx2C_Xaqj-o9qqsxcSFMg2&amp;t=636577066476378381&amp;compress=0&amp;_TSM_CombinedScripts_=%3b%3bTelerik.Sitefinity.Resources%2c+Version%3d10.2.6626.0%2c+Culture%3dneutral%2c+PublicKeyToken%3db28c218413bdf563%3aen%3a75ec3a6b-4122-4e56-a1f4-58f0be0d90a0%3a7a90d6a" type="text/css" rel="stylesheet"><link href="/Telerik.Web.UI.WebResource.axd?d=xXLWwJLoniotGGYycF401aHr8FKzDfXvKl1ZspUoAgb6kqMkAjv5KpYf9GPZFfRvITvyT5xMvm9pXqf4fAbXPpMeOX1002T8uIkmk0EiNZytqobfxrDJME9v2vKOyo3mdDx2C_Xaqj-o9qqsxcSFMg2&amp;t=636577066476378381&amp;compress=0&amp;_TSM_CombinedScripts_=%3b%3bTelerik.Sitefinity.Resources%2c+Version%3d10.2.6626.0%2c+Culture%3dneutral%2c+PublicKeyToken%3db28c218413bdf563%3aen%3a75ec3a6b-4122-4e56-a1f4-58f0be0d90a0%3a83fa35c7" type="text/css" rel="stylesheet"><link href="/Sitefinity/Public/ResponsiveDesign/layout_transformations.css?pageDataId=490bd129-53ff-6d7e-be9c-ff000003f2be&amp;pageSiteNode=480BD129-53FF-6D7E-BE9C-FF000003F2BE/c9471d86-236d-4db8-af93-fabfb5fa3543/SitefinitySiteMap" type="text/css" rel="stylesheet"><link href="/StyleSheet/dbs_100.css" type="text/css" rel="stylesheet" media="all"><link href="../StyleSheet/Responsive.min.css" type="text/css" rel="stylesheet" media="all and (min-width:0px) and (max-width:320px)"><link href="../StyleSheet/Responsive.min.css" type="text/css" rel="stylesheet" media="only screen and (min-width: 320px) and (max-width: 480px)"><link href="../StyleSheet/Responsive.min.css" type="text/css" rel="stylesheet" media="all and (min-width:480px) and (max-width:960px)"><link href="../StyleSheet/Responsive_Tablet.min.css" type="text/css" rel="stylesheet" media="only screen and (min-width: 600px) and (max-width : 1024px)"><link href="../StyleSheet/responsive_small.min.css" type="text/css" rel="stylesheet" media="all and (min-width:0px) and (max-width:320px)"><link href="../StyleSheet/responsive_small.min.css" type="text/css" rel="stylesheet" media="all and (min-width:0px) and (max-width:480px)"><link href="../StyleSheet/tiny.css" type="text/css" rel="stylesheet" media="all and (min-width:0px) and (max-width:260px)"><meta name="description" content="Read what DBS Students say about studying at the college. Degree, Diploma and Postgraduate testimonials, full-time and part-time study in Arts, Business, Law, Psychology, Social Science, Management, Marketing, HRM, IT, Cloud Computing, Information Systems at Dublin Business School"><meta name="keywords" content="DBS student opinions, study, college. degree, Diploma,  Postgraduate testimonials, full-time and part-time study at Dublin Business School, Arts, Business, Law, Psychology, Social Science, Management, Marketing, HRM, IT, Cloud Computing, Information Systems"></head>
+<body>
+    <form method="post" action="./student-testimonials" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="ctl08_TSSM" id="ctl08_TSSM" value="">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNDM3MjQ4MDE5ZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAQU9Y3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRUQjYxNDhEMUEwNTUkY3RsMDAkY3RsMDAkQnJlYWRjcnVtYhoXtclqb8d9GJUT6dP76U0FCDkKjkotVZxV7WwhF79b">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="https://ajax.aspnetcdn.com/ajax/4.6/1/WebForms.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+window.WebForm_PostBackOptions||document.write('<script type="text/javascript" src="/WebResource.axd?d=HuKDHLc8WlDUoLUXWQ0G5an1DSJSd4BPCCA5x4lGxTN82py2X_1WCtW8S9iw6EmxuFFQBMkcZhecXGGoUdKLLwpEGLBUBCYQ7o6cWB6liMU1&amp;t=636577066476690871"><\/script>');//]]>
+</script>
+
+
+
+<script src="https://ajax.aspnetcdn.com/ajax/4.6/1/MicrosoftAjax.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+(window.Sys && Sys._Application && Sys.Observer)||document.write('<script type="text/javascript" src="/ScriptResource.axd?d=ZVXTYQm8cqYt-GZIDyGTHrbLkVZ87fAiJoYtuB5b-DIsvnzm4L-1msk8HClmsQvZi-qTXd3QyOVJemw_pIXfiElMuQDMcVP_PCjDQ1His4Vs6djgMFi6NHAQYAzygi2KoRzYk9qR4tOwvkvNQ01JM71U427XgfIYDu5dsbo9x_o1&t=ffffffffcd368728"><\/script>');//]]>
+</script>
+
+<script src="https://ajax.aspnetcdn.com/ajax/4.6/1/MicrosoftAjaxWebForms.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+(window.Sys && Sys.WebForms)||document.write('<script type="text/javascript" src="/ScriptResource.axd?d=XwtxuxP6CaFHvv89F8bgRJtkTMphcQuCeILJmyIwDKgcYCEq9W12M9hYJcaEXkqGo8dZoFUa8-zw-qjPfRvoFzaJcjfHQcdg_eiPkhKWXRoYrKl-BwM9l3kLM_EUFc7nYVjEvzyE32MGgHx1LRtnbTmgI_PVIwSDwkSeLJC_oU-fVmMbYePcmeaOCkY-H1Sw0&t=ffffffffcd368728"><\/script>');//]]>
+</script>
+
+<script src="https://code.jquery.com/jquery-1.12.1.min.js" type="text/javascript"></script>
+<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=fUkP-ZJzrXJgt1q2qwomKw48eMiTLDEgI55veEUT74XCNo7CdiagHr6nlW4gJJ7RYP-dVjYbtWEj4PsWivWDpQoTk_G-CsWDaSfvRqssFYEgojctvQIeZkj9oiBNvqUmjM6SYw3S94p93Rdz4Owsb6ZLi_F6nthl08nw3UfV84TzyLLEzoKQz2OUV_0zes0gr8a89kk6217a7NrsXGXeKw2&amp;t=388ae382" type="text/javascript"></script>
+<script src="/Frontend-Assembly/Telerik.Sitefinity.Frontend.Search/Mvc/Scripts/SearchBox/Search-box.js" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=O6L8E69JzzV1N7VmMJxUDSULiOkKYRSHcMab7VDlDLc8sbaT1yyqO0tYulPgaFX2mDDEl5b2_XyatXh1sZrTIYTEl5MBdGwwdx0IX6GCNiJF2tM1TJbMxXFP6kOzaRqA0cDbV99iFIPek-K1qmzpnA2&amp;t=ffffffffd8a61378" type="text/javascript"></script>
+    
+<div id="CookDiv" class="cookdiv" style="display:none">
+    <div class="InnerWrapper">
+        <p class="cookp" style="z-index:999">Our site uses cookies. By continuing to use our site you are agreeing to our <a href="/cookie-policy">cookie policy. </a></p>
+        <input type="submit" name="ctl00$usrCtrl$Hide" value="Accept and close" onclick="createCookie(&#39;DBS&#39;,&#39;Accept Cookies&#39;,30);" id="usrCtrl_Hide" class="DBS_Button DBS_Green" style="margin: 10px; padding: 10px 25px !important;">
+    </div>
+</div>
+<script type="text/javascript">
+    function createCookie(name, value, day) {
+        var date = new Date();
+        date.setTime(date.getTime() + (day * 24 * 60 * 60 * 1000));
+        var expires = "; expires=" + date.toGMTString();
+        document.cookie = name + "=" + value + expires + "; path=/";
+    }
+    if (readCookie("DBS") == undefined) {
+        document.getElementById("CookDiv").style.display = "block"
+    }
+    else {
+        window.dataLayer.push({
+            'hasUserConsented': 'true',
+            'event': 'track_GAEventConsent'
+        });
+    }
+    function readCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+</script>
+
+
+
+    
+    <!-- Google Tag Manager (noscript) -->
+    
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div id="mobile-indicator"></div>
+    
+
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$Scriptmanager1', 'form1', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+        <div>
+            
+<div class="sf_cols Header DBS_White">
+    <div style="" class="sf_colsOut sf_1col_1_100">
+        <div id="ContentPlaceHolder1_TB6148D1A001_Col00" class="sf_colsIn sf_1col_1in_100"><div class="sf_cols InnerWrapper">
+    <div style="" class="sf_colsOut sf_1col_1_100">
+        <div id="ContentPlaceHolder1_TB6148D1A003_Col00" class="sf_colsIn sf_1col_1in_100"><div class="sf_cols">
+    <div class="sf_colsOut sf_2cols_1_25">
+        <div id="ContentPlaceHolder1_TB6148D1A021_Col00" class="sf_colsIn sf_2cols_1in_25"><div class='sfContentBlock HomeLogo'><a href="http://www.dbs.ie/"><img src="/images/default-source/default-album/dbs_2012_rgb.png?sfvrsn=351bbce9_6" alt="Dublin Business School" title="Dublin Business School" displaymode="Original"></a>
+
+
+</div>
+            
+        </div>
+    </div>
+    <div class="sf_colsOut sf_2cols_2_75">
+        <div id="ContentPlaceHolder1_TB6148D1A021_Col01" class="sf_colsIn sf_2cols_2in_75"><div class="sf_cols">
+    <div class="sf_colsOut sf_2cols_1_25">
+        <div id="ContentPlaceHolder1_TB6148D1A056_Col00" class="sf_colsIn sf_2cols_1in_25">
+            
+        </div>
+    </div>
+    <div class="sf_colsOut sf_2cols_2_75">
+        <div id="ContentPlaceHolder1_TB6148D1A056_Col01" class="sf_colsIn sf_2cols_2in_75">
+<link href="/Frontend-Assembly/Telerik.Sitefinity.Frontend.Search/assets/dist/css/sf-search-box.min.css" rel="stylesheet" type="text/css">
+
+
+
+<div class="custom-search">
+    <input type="text" title="Search input" placeholder="Search for a course" id="62358496-38ed-4b05-b7c9-399e73036b88" value="">
+    <button type="button" id="572ea37b-33c0-45a6-8343-e58d9e47887a">Search</button>
+
+    <input type="hidden" data-sf-role="resultsUrl" value="/search-results">
+    <input type="hidden" data-sf-role="indexCatalogue" value="searchindexv2">
+    <input type="hidden" data-sf-role="wordsMode" value="AllWords">
+    <input type="hidden" data-sf-role="disableSuggestions" value='false'>
+    <input type="hidden" data-sf-role="minSuggestionLength" value="2">
+    <input type="hidden" data-sf-role="suggestionFields" value="Title,Content">
+    <input type="hidden" data-sf-role="language">
+    <input type="hidden" data-sf-role="suggestionsRoute" value="/restapi/search/suggestions">
+    <input type="hidden" data-sf-role="searchTextBoxId" value='#62358496-38ed-4b05-b7c9-399e73036b88'>
+    <input type="hidden" data-sf-role="searchButtonId" value='#572ea37b-33c0-45a6-8343-e58d9e47887a'>
+</div>
+
+
+
+
+
+        
+        </div>
+    </div>
+</div>
+<div class='sfContentBlock TopMenuContainer'><div class="TopGlobalMenu">
+<a href="http://www.dbs.ie/about-dbs/for-employers">Corporate Services</a> |
+<a href="http://library.dbs.ie">DBS Library</a> |
+<a href="http://www.dbs.ie/International-students">International Students</a> | <a href="http://www.dbs-students.com">Current Students</a> | <a href="http://www.dbs.ie/news-and-events"></a><a href="http://www.dbs.ie/news-events">News &amp; Events</a>&nbsp;</div>
+
+
+</div>
+
+<script>
+    $(document).ready(function () {
+
+        $(".searchDiv").click(function () {
+            event.stopPropagation();
+            $(".GlobalSearchBox").toggle();
+            $(".GlobalSearchBox input").focus();
+        });
+
+        $(".GlobalSearchBox input").attr("placeholder", "Type and hit enter...");
+    });
+</script>
+
+<div>
+    
+            <div id="main_navigation">
+                <ul id="menuroot">
+                    <li id="firstMenuItem"><a title="Home" href="https://www.dbs.ie">
+                        <img title="Home" class="icon" alt="Home" src="/images/default-source/icons/home.png"></a></li>
+        
+            <li class='trigger'>
+                <a class="&lt;%# DataBinder.Eval(Container.DataItem, &quot;CssStyle&quot;) %> FirstLevelMenu" href="../courses">Courses</a>
+                <div class="SecondaryContainer">
+                    
+
+                            <ul class="menusecondlevel">
+                        
+                            <li>
+                                <a class="NavHeaderTopMenu">COURSES BY SUBJECT</a>
+                            </li>
+                        
+                            <li>
+                                <a href="../courses/accounting-and-finance">Accounting & Finance</a>
+                            </li>
+                        
+                            <li>
+                                <a href="../courses/arts">Arts</a>
+                            </li>
+                        
+                            <li>
+                                <a href="../courses/business-management">Business & Management</a>
+                            </li>
+                        
+                            <li>
+                                <a href="../courses/counselling-and-psychotherapy">Counselling & Psychotherapy</a>
+                            </li>
+                        
+                            <li>
+                                <a href="../courses/information-technology">Information Technology</a>
+                            </li>
+                        
+                            <li>
+                                <a href="../courses/law">Law</a>
+                            </li>
+                        
+                            <li>
+                                <a href="../courses/marketing-and-event-management">Marketing & Event Management</a>
+                            </li>
+                        
+                            <li>
+                                <a href="../courses/media-and-journalism">Media & Journalism</a>
+                            </li>
+                        
+                            <li>
+                                <a href="../courses/professional-accountancy">Professional Accountancy</a>
+                            </li>
+                        
+                            <li>
+                                <a href="../courses/psychology-social-science">Psychology & Social Science</a>
+                            </li>
+                        
+                            </ul>
+                        
+                    
+                            <ul class="menuaddlevel">
+                        
+                            <li>
+                                <a class="NavHeaderTopMenu">COURSES BY TYPE</a>
+                            </li>
+                        
+                            <li>
+                                <a href="../courses/full-time-undergraduate">Full-time Degrees/ Certificates</a>
+                            </li>
+                        
+                            <li>
+                                <a href="../courses/postgraduate">Postgraduate Programmes</a>
+                            </li>
+                        
+                            <li>
+                                <a href="../courses/springboard">FREE* Springboard+ Programmes</a>
+                            </li>
+                        
+                            <li>
+                                <a href="../courses/ict-skills-programme">FREE* ICT Skills Programmes</a>
+                            </li>
+                        
+                            <li>
+                                <a href="../courses/evening-degree">Evening Degrees</a>
+                            </li>
+                        
+                            <li>
+                                <a href="../courses/professional-accountancy">Professional Accountancy</a>
+                            </li>
+                        
+                            <li>
+                                <a href="../courses/professional-evening-diploma">Professional Evening Diplomas</a>
+                            </li>
+                        
+                            <li>
+                                <a href="../courses/international">International</a>
+                            </li>
+                        
+                            <li>
+                                <a href="../courses/dbs-online">Online Courses at DBS</a>
+                            </li>
+                        
+                            </ul>
+                        
+                </div>
+            </li>
+        
+            <li class='trigger'>
+                <a class="&lt;%# DataBinder.Eval(Container.DataItem, &quot;CssStyle&quot;) %> FirstLevelMenu" href="../about-dbs">Why DBS</a>
+                <div class="SecondaryContainer">
+                    
+
+                            <ul class="menusecondlevel">
+                        
+                            <li>
+                                <a class="NavHeaderTopMenu">WHY DBS</a>
+                            </li>
+                        
+                            <li>
+                                <a href="../about-dbs/welcome">Welcome to Dublin Business School</a>
+                            </li>
+                        
+                            <li>
+                                <a href="../about-dbs/history-of-dbs">History of DBS</a>
+                            </li>
+                        
+                            <li>
+                                <a href="../about-dbs/academic-schools-staff">Academic School & Staff</a>
+                            </li>
+                        
+                            <li>
+                                <a href="../about-dbs/recognition-and-accreditation">Recognition & Accreditation</a>
+                            </li>
+                        
+                            <li>
+                                <a href="../advantage">DBS Advantage</a>
+                            </li>
+                        
+                            <li>
+                                <a href="../about-dbs/for-employers">For Employers</a>
+                            </li>
+                        
+                            <li>
+                                <a href="../about-dbs/for-guidance-counsellors">For Guidance Counsellors</a>
+                            </li>
+                        
+                            <li>
+                                <a href="../about-dbs/kaplan-dublin-business-school">Kaplan businesses</a>
+                            </li>
+                        
+                            <li>
+                                <a href="../about-dbs/jobs-dublin-business-school">Vacancies</a>
+                            </li>
+                        
+                            <li>
+                                <a href="../about-dbs/hetac-institutional-review">HETAC Institutional Review</a>
+                            </li>
+                        
+                            <li>
+                                <a href="../about-dbs/new-programmes-at-dbs">New programmes at DBS</a>
+                            </li>
+                        
+                            <li>
+                                <a href="../about-dbs/dbs-esource">DBS eSource</a>
+                            </li>
+                        
+                            <li>
+                                <a href="../about-dbs/news-and-events">News & Events</a>
+                            </li>
+                        
+                            <li>
+                                <a href="../about-dbs/why-dbs">Why DBS</a>
+                            </li>
+                        
+                            <li>
+                                <a href="../about-dbs/links-with-industry">Links with Industry</a>
+                            </li>
+                        
+                            </ul>
+                        
+                    
+                            <ul class="menuaddlevel">
+                        
+                            <li>
+                                <a class="NavHeaderTopMenu">STUDENT EXPERIENCE</a>
+                            </li>
+                        
+                            <li>
+                                <a href="student-services">Student Services</a>
+                            </li>
+                        
+                            <li>
+                                <a href="student-life">Student Life</a>
+                            </li>
+                        
+                            <li>
+                                <a href="clubs-societies">Clubs and Societies</a>
+                            </li>
+                        
+                            <li>
+                                <a href="disabilities-support">Disability Support</a>
+                            </li>
+                        
+                            <li>
+                                <a href="outstanding-facilities">Outstanding Facilities</a>
+                            </li>
+                        
+                            <li>
+                                <a href="volunteer-at-dbs">Volunteer at DBS</a>
+                            </li>
+                        
+                            <li>
+                                <a href="alumni">Alumni</a>
+                            </li>
+                        
+                            <li>
+                                <a href="internationals">International Students</a>
+                            </li>
+                        
+                            <li>
+                                <a href="employability">Employability</a>
+                            </li>
+                        
+                            <li>
+                                <a href="careers">Careers</a>
+                            </li>
+                        
+                            <li>
+                                <a href="learning-environment">Learning Environment</a>
+                            </li>
+                        
+                            <li>
+                                <a href="student-testimonials">Student Testimonials</a>
+                            </li>
+                        
+                            </ul>
+                        
+                </div>
+            </li>
+        
+            <li class='trigger'>
+                <a class="&lt;%# DataBinder.Eval(Container.DataItem, &quot;CssStyle&quot;) %> FirstLevelMenu" href="../contact">Contact</a>
+                <div class="SecondaryContainer">
+                    
+
+                            <ul class="menusecondlevel">
+                        
+                            <li>
+                                <a href="../about-dbs/contact-us">Contact Information</a>
+                            </li>
+                        
+                            <li>
+                                <a href="../about-dbs/location">DBS Locations</a>
+                            </li>
+                        
+                            <li>
+                                <a href="../contact/order-a-prospectus">Order a Prospectus</a>
+                            </li>
+                        
+                            <li>
+                                <a href="../contact-dbs/visit-dbs">Visit DBS</a>
+                            </li>
+                        
+                            </ul>
+                        
+                    
+                </div>
+            </li>
+        
+            <li class=''>
+                <a class="&lt;%# DataBinder.Eval(Container.DataItem, &quot;CssStyle&quot;) %> FirstLevelMenu" href="../enquiry/enquire-online">Enquiry</a>
+                <div class="SecondaryContainer">
+                    
+
+                            <ul class="menusecondlevel">
+                        
+                            <li>
+                                <a class="NavHeaderTopMenu">ENQUIRY</a>
+                            </li>
+                        
+                            </ul>
+                        
+                    
+                </div>
+            </li>
+        
+            <li class=''>
+                <a class="&lt;%# DataBinder.Eval(Container.DataItem, &quot;CssStyle&quot;) %> FirstLevelMenu" href="../application-form">Apply</a>
+                <div class="SecondaryContainer">
+                    
+
+                            <ul class="menusecondlevel">
+                        
+                            <li>
+                                <a class="NavHeaderTopMenu">APPLY</a>
+                            </li>
+                        
+                            </ul>
+                        
+                    
+                </div>
+            </li>
+        
+                <li class='mobileOnly'>
+                <a href="http://dbs-students.com">Current Students</a>
+                <a href="/about-dbs/for-employers">Corporate Services</a>
+                <a href="https://library.dbs.ie/">DBS Library</a>
+                <a href="/news-events/">News & Events</a>
+                <a href="/International-students">International Students</a>
+                </li>
+            </ul>
+            <div id="searchIconMag" class="searchDiv"></div>
+            </div>
+        
+</div>
+<div class="sf_cols SearchBoxContainer">
+    <div class="sf_colsOut sf_1col_1_100">
+        <div id="ContentPlaceHolder1_TB6148D1A042_Col00" class="sf_colsIn sf_1col_1in_100">
+            
+        </div>
+    </div>
+</div>
+        
+        </div>
+    </div>
+</div>
+
+            
+        </div>
+    </div>
+</div>
+            
+        </div>
+    </div>
+</div><div class="sf_cols TopBanner">
+    <div class="sf_colsOut sf_1col_1_100">
+        <div id="ContentPlaceHolder1_TB6148D1A002_Col00" class="sf_colsIn sf_1col_1in_100"><div class="sf_cols InnerWrapper">
+    <div style="" class="sf_colsOut sf_1col_1_100">
+        <div id="ContentPlaceHolder1_TB6148D1A004_Col00" class="sf_colsIn sf_1col_1in_100"><div class='sfContentBlock'><h1 class="bannerH1"></h1>
+
+
+</div>
+            
+        </div>
+    </div>
+</div>
+            
+        </div>
+    </div>
+</div><div class="sf_cols CourseSearch DBS_LightGray">
+    <div style="" class="sf_colsOut sf_1col_1_100">
+        <div id="ContentPlaceHolder1_TB6148D1A005_Col00" class="sf_colsIn sf_1col_1in_100"><div class="sf_cols InnerWrapper CourseSearchDiv">
+    <div style="width: 100%;" class="sf_colsOut sf_1col_1_100">
+        <div id="ContentPlaceHolder1_TB6148D1A017_Col00" class="sf_colsIn sf_1col_1in_100">
+            
+        </div>
+    </div>
+</div>
+            
+        </div>
+    </div>
+</div><div class="sf_cols">
+    <div class="sf_colsOut sf_1col_1_100">
+        <div id="ContentPlaceHolder1_TB6148D1A015_Col00" class="sf_colsIn sf_1col_1in_100"><div class="sf_cols InnerWrapper MobileWrapper">
+    <div class="sf_colsOut sf_1col_1_100">
+        <div id="ContentPlaceHolder1_TB6148D1A018_Col00" class="sf_colsIn sf_1col_1in_100"><div id="ContentPlaceHolder1_TB6148D1A055">
+	
+
+<div class="sfBreadcrumbWrp">
+    <span id="ContentPlaceHolder1_TB6148D1A055_ctl00_ctl00_BreadcrumbLabel" class="sfBreadcrumbLabel" style="display:none;"></span>
+    <div id="ctl00_ContentPlaceHolder1_TB6148D1A055_ctl00_ctl00_Breadcrumb" class="RadSiteMap RadSiteMap_Default">
+		<!-- 2017.3.913.40 --><ul class="rsmFlow rsmLevel rsmOneLevel">
+			<li class="rsmItem sfBreadcrumbNavigation"><a class="rsmLink" href="../home" title="Dublin Business School is the largest independent third-level college in Ireland, offering a wide range of undergraduate, postgraduate and professional degree and masters courses in Business, Arts, IT, Law and Psychology.">Home</a><span class='sfBreadcrumbNodeSeparator'>/</span></li> <li class="rsmItem sfNoBreadcrumbNavigation"><a class="rsmLink" href="javascript: void(0)" title="Read what DBS Students say about studying at the college. Degree, Diploma and Postgraduate testimonials, full-time and part-time study in Arts, Business, Law, Psychology, Social Science, Management, Marketing, HRM, IT, Cloud Computing, Information Systems at Dublin Business School">Student Testimonials</a></li>
+		</ul><input id="ctl00_ContentPlaceHolder1_TB6148D1A055_ctl00_ctl00_Breadcrumb_ClientState" name="ctl00_ContentPlaceHolder1_TB6148D1A055_ctl00_ctl00_Breadcrumb_ClientState" type="hidden">
+	</div>
+</div>
+</div><div class="sf_cols">
+    <div style="width: 30%;" class="sf_colsOut sf_2cols_1_25 LayoutLeft">
+        <div id="ContentPlaceHolder1_TB6148D1A034_Col00" class="sf_colsIn sf_2cols_1in_25">
+
+
+
+
+<div class="sfNavWrp sfNavVerticalWrp ">
+    
+    
+
+<a id="ContentPlaceHolder1_TB6148D1A035_ctl00_ctl00_ctl01_ctl00_ctl00_toggleAnchor" class="sfNavToggle">Menu</a>
+
+<script type="text/javascript">
+    (function ($) {
+        $($get('ContentPlaceHolder1_TB6148D1A035_ctl00_ctl00_ctl01_ctl00_ctl00_toggleAnchor')).click(function () {
+            $(this).closest(".sfNavWrp").find(".sfNavList").toggleClass("sfShown");
+        });
+    })(jQuery);
+</script>
+    
+    
+
+    <ul class="sfNavVertical sfNavList VerticalNavCustom">
+        
+                            <li>
+                                <a href="/student-experience/student-services">Student Services</a>          
+                            </li>
+                         
+                            <li>
+                                <a href="/student-experience/student-life">Student Life</a>          
+                            </li>
+                         
+                            <li>
+                                <a href="/student-experience/clubs-societies">Clubs and Societies</a>          
+                            </li>
+                         
+                            <li>
+                                <a href="/student-experience/disabilities-support">Disability Support</a>          
+                            </li>
+                         
+                            <li>
+                                <a href="/student-experience/outstanding-facilities">Outstanding Facilities</a>          
+                            </li>
+                         
+                            <li>
+                                <a href="/student-experience/volunteer-at-dbs">Volunteer at DBS</a>          
+                            </li>
+                         
+                            <li>
+                                <a href="/student-experience/alumni">Alumni</a>          
+                            </li>
+                         
+                            <li>
+                                <a href="/student-experience/internationals">International Students</a>          
+                            </li>
+                         
+                            <li>
+                                <a href="/student-experience/employability">Employability</a>          
+                            </li>
+                         
+                            <li>
+                                <a href="/student-experience/careers" target="_blank">Careers</a>          
+                            </li>
+                         
+                            <li>
+                                <a href="/student-experience/learning-environment">Learning Environment</a>          
+                            </li>
+                         
+                            <li>
+                                <a href="/student-experience/student-testimonials" class="sfSel">Student Testimonials</a>          
+                            </li>
+                        
+    </ul>
+</div>
+
+            
+        </div>
+    </div>
+    <div style="width: 70%;" class="sf_colsOut sf_2cols_2_75 LayoutRight">
+        <div id="ContentPlaceHolder1_TB6148D1A034_Col01" class="sf_colsIn sf_2cols_2in_75"><div class='sfContentBlock'><h2>
+Student Testimonials</h2>
+<h1 style="text-align: justify;">Full-Time Undergraduate</h1>
+<h4 style="text-align: left;">Luke Downes - BA (Hons) Business Management (Marketing)</h4>
+<p style="text-align: justify;"><img src="/images/default-source/default-album/luke-downes-dbs.jpg?sfvrsn=7ae9bee9_1&amp;MaxWidth=400&amp;MaxHeight=&amp;ScaleUp=false&amp;Quality=High&amp;Method=ResizeFitToAreaArguments&amp;Signature=26CD5082720A9533016BCCDEF37819083209DF17" method="ResizeFitToAreaArguments" customsizemethodproperties="{'MaxWidth':'400','MaxHeight':'','ScaleUp':false,'Quality':'High'}" displaymode="Custom" alt="Luke Downes DBS" title="Luke Downes DBS" style="float: left;">"The best thing about studying in DBS was definitely the lecturers and the high quality of lectures I sat in on a daily basis. The relatively small class sizes coupled with how receptive the lecturers are to sharing their seemingly unquantifiable knowledge was no doubt an essential component of the success of my degree and ensured that assignment deadlines came and went without incident.&nbsp;<br>
+<br>
+The course offered its students multiple opportunities to work as part of a group to complete tasks, I believe this facet of the course is both beneficial as it requires a group of individuals to work cohesively and enjoyable as there is an immense sense of gratification in being successful as a team.&nbsp;DBS offer a plethora of sports and societies which help students meet those with similar interests, I can attest to how superb these are as I am a former member of a number of them.&nbsp;I feel as though the standard of the degree that I achieved in DBS will open doors for me in the business world in the long term.&nbsp;I plan on adding to my undergrad education in the short term by undertaking a postgrad in one aspect of business and judging by my time as an Undergrad there, I know at least one institution I&rsquo;d be honoured to attend."</p>
+<h4 style="text-align: left;">Emma McCauley - BA (Hons) Business - Human Resource Management</h4>
+<p style="text-align: justify;"><img src="/images/default-source/default-album/emma-mccauleyd167d32953ff6d7ebe9cff000003f2be.jpg?sfvrsn=7d98bee9_1&amp;MaxWidth=400&amp;MaxHeight=&amp;ScaleUp=false&amp;Quality=High&amp;Method=ResizeFitToAreaArguments&amp;Signature=033E35978201485ABDB3C86683EF24346B625544" method="ResizeFitToAreaArguments" customsizemethodproperties="{'MaxWidth':'400','MaxHeight':'','ScaleUp':false,'Quality':'High'}" displaymode="Custom" alt="Emma McCauley " title="Emma McCauley" style="float: left;">"At DBS, the course was well rounded, classes were small, and the lecturers very accessible, which suited my learning style.&nbsp;<br>
+<br>
+The lecturers knew everybody by name, and the support they gave both inside and outside the classroom was brilliant.&nbsp;<br>
+They used a variety of teaching methods and moved through the course material ensuring that no one in the class fell behind. &nbsp;<br>
+<br>
+I wholeheartedly recommend DBS. College life was excellent and I made loads of friends even on my first day!&nbsp;<br>
+There was a culture of helping everyone and inclusion didn&rsquo;t need to be stressed by the lecturers - it just happened. &nbsp;<br>
+I believe that when individual needs, whether social or educational, are catered for as I found them in DBS, then students can more easily learn and achieve even better results.<br>
+<br>
+My DBS degree is internationally recognised. &nbsp;It has already opened many career doors for me, and I believe it will continue to do so in the years to come.<br>
+Since completing my degree, I have commenced employment as a Recruitment Coordinator in the HR Department of a large Financial Services organisation.&nbsp;<br>
+I intend to progress to the CIPD exams during the coming year with a view to advancing my career within the organisation. &nbsp;I also plan to return to DBS in a few years to complete my Masters. "</p>
+<h4 style="text-align: left;">&nbsp;<U+200B>Valerie Dwyer - BA (Hons) Social Science</h4>
+<p style="text-align: justify;"><img src="/images/default-source/default-album/valerie-ann-dwyer-dbs.jpg?sfvrsn=10e9bee9_1&amp;MaxWidth=400&amp;MaxHeight=&amp;ScaleUp=false&amp;Quality=High&amp;Method=ResizeFitToAreaArguments&amp;Signature=E402B05EF13161FE790C86AC7E7A418B42B736FD" method="ResizeFitToAreaArguments" customsizemethodproperties="{'MaxWidth':'400','MaxHeight':'','ScaleUp':false,'Quality':'High'}" displaymode="Custom" alt="Valerie Ann Dwyer DBS" title="Valerie Ann Dwyer DBS" style="float: left;"><br>
+<br>
+<br>
+<br>
+<br>
+"What was great about studying in DBS for me was the individual basis, in which the lecturers approached classes, which made learning much easier. The Social Science lecturers are really involved with the students and genuinely interested in seeing you do well.<br>
+<br>
+I really loved the course; it was so interesting throughout all three years. College life in DBS was the best part! It was really easy to make friends and there is just a great atmosphere around the college."</p>
+<h4 style="text-align: left;">Alexander Jacobsson - BA (Hons) Marketing</h4>
+<h3 style="text-align: justify;"><img src="/images/default-source/default-album/alexander-jacobsson-dbs.jpg?sfvrsn=ee9bee9_1&amp;MaxWidth=400&amp;MaxHeight=&amp;ScaleUp=false&amp;Quality=High&amp;Method=ResizeFitToAreaArguments&amp;Signature=4FC3718E2EB8792BAE000A56C97789A7B5B38D57" method="ResizeFitToAreaArguments" customsizemethodproperties="{'MaxWidth':'400','MaxHeight':'','ScaleUp':false,'Quality':'High'}" displaymode="Custom" alt="Alexander Jacobsson DBS" title="Alexander Jacobsson DBS" style="float: left;"></h3>
+<p style="text-align: justify;">"One of the best things of studying at DBS was that it&acute;s diversity of  students and the schools/teachers ability/capability to meet and cooperate with the students to reach a successful education.&nbsp;<br>
+Furthermore, the school librarians were very positive and helpful at all times, helping out with a few tips and tricks that really helped me, being dyslexic in need of extra help, through my college year at DBS.&nbsp;<br>
+<br>
+<br>
+College life at DBS was an experience that I will remember for the rest of my life, not only because what you learn in class, but what you learn by studying abroad and <U+200B>meeting people from different parts of the world. These experiences have&nbsp;shown to be of use both in my social life and professional life."</p>
+<h4 style="text-align: left;">Michael Saez- BA (Hons) Business Information Systems</h4>
+<p style="text-align: justify;">
+<img src="/images/default-source/icons/isabel-oliver-18b19d12953ff6d7ebe9cff000003f2be.jpg?sfvrsn=27e6bce9_6&amp;MaxWidth=400&amp;MaxHeight=&amp;ScaleUp=false&amp;Quality=High&amp;Method=ResizeFitToAreaArguments&amp;Signature=ED7E6EA81AA2DB470E928F9A1523AF8D53E0DCF5" displaymode="Custom" alt="Michael Saez" title="Michael Saez" method="ResizeFitToAreaArguments" customsizemethodproperties="{'MaxWidth':'400','MaxHeight':'','ScaleUp':false,'Quality':'High'}" style="float: left;">
+</p>
+<p style="text-align: justify;">"I found that the staff at DBS very helpful particularly in assisting International Students with all of the formalities. I also found that the Professors were very supportive and always willing to respond to queries and address problems that I had with the material. I also found that the project across the modules, although challenging, to be very useful.</p>
+<p style="text-align: justify;">I found getting to know the many nationalities including the Irish students on the course to be very enjoyable and a real learning experience for me. The material in the courses was very stimulating and related very well to real life contexts. The availability of all the course and support materials was very convenient.<br>
+College life in DBS was fun with lots of activities. In my third year I was elected as class representative and this led to greater interaction with other students and the Professors.<br>
+<br>
+I plan to work in a role that gives me the opportunity to apply that learning and knowledge that I gained at DBS. I also plan to do a Masters degree after I have a number of years of work experience."</p>
+<h4 style="text-align: left;">Isabel Oliver- BA in Film and Media</h4>
+<p style="text-align: justify;">
+<img src="/images/default-source/icons/isabel-oliver-1.jpg?sfvrsn=d5e6bce9_6&amp;MaxWidth=400&amp;MaxHeight=&amp;ScaleUp=false&amp;Quality=High&amp;Method=ResizeFitToAreaArguments&amp;Signature=0A42806B5D47368EC1533578BCDA96EE391D668C" displaymode="Custom" alt="Isabel Oliver" title="Isabel Oliver" style="line-height: 1.5; float: left;" method="ResizeFitToAreaArguments" customsizemethodproperties="{'MaxWidth':'400','MaxHeight':'','ScaleUp':false,'Quality':'High'}">
+</p>
+<p style="text-align: justify;">"DBS&rsquo; Film and Media course has an enormous amount to offer its students. From its informative lectures; covering everything from the history of film and print media, to the hands-on practical modules, allowing students to write their own scripts, create a short film, as well as compose own film review.&nbsp;</p>
+<p style="text-align: justify;"><span style="line-height: 1.5;">
+<br>
+The best aspect about studying in DBS , particularly within this course, was the variety throughout the programme itself. This course introduces its students to several alternative aspects within the media industry such as radio, journalism, and the business aspect of media itself, thus giving students a chance to find their own interests and strengths within the industry.&nbsp;<br>
+</span><span style="line-height: 1.5;"><br>
+I personally felt the course was extremely rewarding, due to its challenging nature and helpful lecturers; with multitude of industry experience&nbsp;During my time studying within DBS I found it an extremely comfortable environment that allowed a healthy balance between social activities and course work. Located right in the busy and energetic city centre, DBS allows it&rsquo;s students to take part in the vibrant and exciting activities Dublin has to offer.&nbsp;<br>
+</span><br>
+DBS also provides a number of opportunities to make new friends, through its dynamic social scene and plethora of social clubs and societies.&nbsp;I believe this degree has given me a number of skills, not only just to work in the film and media industry, but to progress in life, as well as achieve the goals ahead."<br>
+<br>
+</p>
+<h4 style="text-align: justify;">Michelle Byrne - BA (Hons) Psychology</h4>
+<p style="text-align: justify;"><img src="/images/default-source/default-album/michelle-byrne-dbs.jpg?sfvrsn=4080bee9_1&amp;MaxWidth=400&amp;MaxHeight=&amp;ScaleUp=false&amp;Quality=High&amp;Method=ResizeFitToAreaArguments&amp;Signature=399BA89D45D63B439124943CA2974B472C10BC92" method="ResizeFitToAreaArguments" customsizemethodproperties="{'MaxWidth':'400','MaxHeight':'','ScaleUp':false,'Quality':'High'}" displaymode="Custom" alt="Michelle Byrne DBS" title="Michelle Byrne DBS" style="float: left;">As a mature student, returning to third level education can be a daunting path to endeavour, my journey with DBS began with undertaking the Diploma in Sports Psychology on a part time basis when I returned to Ireland from living in Australia for two years.&nbsp;<br>
+<br>
+Coming back home brought with it many challenges but I found this gradual transition back to full time education both profoundly exciting and highly rewarding.&nbsp;<br>
+It was a challenge that was warmly supported by the <U+200B>Student Services Team at DBS, making the once feared concept of returning to college whilst juggling a part time job and having personal commitments a lot easier to grasp and take on.&nbsp;<br>
+<br>
+Throughout my three years studying the BA (Hons) in Psychology, the student focus and support from every lecture across each module was fantastic and extremely reliable.&nbsp;I found the level of encouragement, one to one tuition, challenges set in place and opportunities to grow as a student, constant.&nbsp;DBS offers a unique aspect unlike most colleges in Ireland, in that it provides students with significant volume of Psychoanalysis throughout the degree. Having no previous knowledge of this aspect to Psychology,&nbsp;</p>
+<p style="text-align: justify;">Achieving an honours degree from DBS in Psychology, although challenging, brings you opportunities across a diversity of academic avenues to further explore upon,&nbsp;it instils a great deal of self-belief and understanding of one&rsquo;s own well-being which you can carry with you into the next chapter of wherever your journey may take you. </p>
+<p style="text-align: justify;">&nbsp;</p>
+<h1 style="text-align: justify;">Part-Time Undergraduate</h1>
+<h4 style="text-align: left;">Hazel O'Carroll - BA (Hons) Business - Management Part-Time</h4>
+<p style="text-align: justify;"><img src="/images/default-source/icons/hazel-o-39-carroll-2.jpg?sfvrsn=92acbce9_5&amp;MaxWidth=400&amp;MaxHeight=&amp;ScaleUp=false&amp;Quality=High&amp;Method=ResizeFitToAreaArguments&amp;Signature=EFBF7B154381B1BCF22847F09809C9269C0AEF0C" method="ResizeFitToAreaArguments" customsizemethodproperties="{'MaxWidth':'400','MaxHeight':'','ScaleUp':false,'Quality':'High'}" displaymode="Custom" alt="Hazel OCarroll" title="Hazel OCarroll " style="float: left;"><span style="line-height: 1.5;">"DBS  offered me the best work life balance, support services, course content and first class lecturing which I knew would be so important during the 4 years of study.&nbsp;</span><span style="line-height: 1.5;">The degree presented me with the strongest foundation for understanding and growth in my career. By studying part-time I felt I could apply the knowledge I would gain in practical situations enabling a greater understanding of business theories and practices.</span></p>
+<p style="text-align: justify;">This course has given me the confidence to take on greater responsibility and enabled me to actively contribute to the resolution of challenges which have been presented within my company. It has provided me with the tools to effectively translate strategic goals, to achieve my company&rsquo;s goals and my personal career goals.&nbsp;<span style="line-height: 1.5;">I have thoroughly enjoyed my time with DBS and I now have an extended network of wonderful friends and business contacts as a result.</span></p>
+<p style="text-align: justify;">
+The lecturers are excellent and understand the nature of the challenges part time study presents. The quality of material delivered is relevant and current while the library and off site learning resources are unparalleled.&nbsp;The diversity of the student body reflects the working environment within Ireland and group course work provides opportunities to interact and learn from people from a variety of working and cultural backgrounds."<br>
+<br>
+</p>
+<h4 style="text-align: justify;">Marek Kotlinksi - BA (Hons) Business Information Systems with Cloud Computing</h4>
+<p style="text-align: justify;"><img src="/images/default-source/default-album/marek-kotlinksi-3.jpg?sfvrsn=b78fbee9_1&amp;MaxWidth=400&amp;MaxHeight=&amp;ScaleUp=false&amp;Quality=High&amp;Method=ResizeFitToAreaArguments&amp;Signature=3C2ABD22DA48A1168C75BA5B10E2C3CC4C6571FE" method="ResizeFitToAreaArguments" customsizemethodproperties="{'MaxWidth':'400','MaxHeight':'','ScaleUp':false,'Quality':'High'}" displaymode="Custom" alt="Marek Kotlinski DBS" title="Marek Kotlinksi 3" style="float: left;">I visited a number of college Open Days in Dublin to find information on courses.<br>
+DBS stood out for me as I was speaking face to face with lecturers and they were really genuinely interested in what I wanted to do.<br>
+<br>
+For the for years studying in DBS I met great people and had excellent lecturers.<br>
+We became friends and still stay in touch.<br>
+Studying in DBS helped me to believe in myself , when I received phone calls from companies like Oracle and Microsoft about working for them. Then I knew that DBS was perfect choice for me. There's a great atmosphere in DBS, and it's filled with helpful people.<br>
+<br>
+</p>
+<h4 style="text-align: justify;">
+Richard Buggy - BA (Hons) Psychology</h4>
+<p style="text-align: justify;">
+<img src="/images/default-source/default-album/richard-buggy-2.jpg?sfvrsn=a08fbee9_1" displaymode="Original" alt="Richard Buggy DBS" title="Richard Buggy 2" style="float: left;">The course provided me with a practical understanding of a wide range of Psychology disciplines, for example BioPsychology, Behavioural Science and Data Analytics &amp; Computing, of which I had very little previous experience, whilst enabling me to pursue my own research into Social Psychology. Personally, I found the whole experience challenging (but manageable) and extremely rewarding. &nbsp;<br>
+<br>
+The lecturers are extremely knowledgeable, supportive and encouraging. The location &amp; facilities are excellent and I made some great friends there!&nbsp;</p>
+<h4 style="text-align: left;">Ben O'Loughlin - BA (Hons) Psychology</h4>
+<p style="text-align: justify;"><img src="/images/default-source/default-album/ben-o-loughlin-dbs.jpg?sfvrsn=6eddbee9_1&amp;MaxWidth=400&amp;MaxHeight=&amp;ScaleUp=false&amp;Quality=High&amp;Method=ResizeFitToAreaArguments&amp;Signature=D3013B16E9254194C31411856DB77A3BA74887EA" method="ResizeFitToAreaArguments" customsizemethodproperties="{'MaxWidth':'400','MaxHeight':'','ScaleUp':false,'Quality':'High'}" displaymode="Custom" alt="Ben O Loughlin DBS" title="Ben O Loughlin DBS" style="float: left;">"I chose the BA in Psychology because of an interest in how people behave and how the mind works.<br>
+The course has changed my outlook on the world, to a more logical, analytical and critical one.&nbsp;<br>
+The best thing about studying in DBS was the lecturers. Their attitude, support and tutelage is second to none. They were always at hand to impart their knowledge and give advice."</p>
+<h3 style="text-align: justify;">
+</h3>
+<h1 style="text-align: justify;">Postgraduate</h1>
+<h4 style="text-align: left;"></h4>
+<h4 style="text-align: left;"><img src="/images/default-source/default-album/michael-kelly-2.jpg?sfvrsn=3d90bee9_1&amp;MaxWidth=400&amp;MaxHeight=&amp;ScaleUp=false&amp;Quality=High&amp;Method=ResizeFitToAreaArguments&amp;Signature=8F5318D4265A2CC7474A518127EC2B76C9C08463" method="ResizeFitToAreaArguments" customsizemethodproperties="{'MaxWidth':'400','MaxHeight':'','ScaleUp':false,'Quality':'High'}" displaymode="Custom" alt="Michael Kelly 2" title="Michael Kelly 2" style="float: left;">Michael Kelly - Master of Business Administration</h4>
+<p style="text-align: left;">"It was 10 years since I completed my degree so I felt I needed to refresh my skills. I chose the MBA at DBS as it covered every aspect of business management. The core modules were very relevant and are essential in today&rsquo;s business world. I chose the general stream as this allowed a chance to study all aspects of business rather than just one area. The part time element was key as I am in full time employment. The location of the college is central and easy to commute to. After researching many institutions DBS was continually coming out top of the list and the open day was extremely beneficial and helped me make up my mind to complete the MBA.<br>
+<br>
+The modules are well presented and formatted and the delivery from the lecturers is first class. There is a genuine willingness to help the student and I have expanded my network both personally and professionally. The methods learned in the modules have been applied in my place of employment and the techniques from project management and marketing modules have helped in my daily applications and improved my stature within my company. The confidence I gained from the completion of the course has been transferred to my current role and will lead to progression in my career.<span style="font-weight: bold;">&nbsp;</span></p>
+<p style="text-align: left;">The course has been extremely enjoyable. I enjoyed the format and the presentation of the course. The lecturers were extremely knowledgeable and approachable which made the learning experience more pleasurable. My fellow students were invaluable in the learning process. The debates we had in class gave great insight to differing perspectives.&nbsp;<br>
+<br>
+The city centre locations coupled with the friendly staff made the whole experience more enjoyable and&nbsp;<br>
+any expectations I had before I completed the course were surpassed. &nbsp;I am extremely happy I completed a course in DBS and would recommend it to anyone looking for further their education."</p>
+<h4 style="text-align: left;">
+Varsha- Ann Jacob- MBA in Project Management</h4>
+<p style="text-align: justify;">
+<img src="/images/default-source/icons/isabel-oliver-1a119d12953ff6d7ebe9cff000003f2be.jpg?sfvrsn=de6bce9_6&amp;MaxWidth=400&amp;MaxHeight=&amp;ScaleUp=false&amp;Quality=High&amp;Method=ResizeFitToAreaArguments&amp;Signature=D036DB489DF6B295CCD785FE997A0501A571945A" displaymode="Custom" alt="Varsha Ann Jacob" title="Varsha Ann Jacob" method="ResizeFitToAreaArguments" customsizemethodproperties="{'MaxWidth':'400','MaxHeight':'','ScaleUp':false,'Quality':'High'}" style="float: left;">
+</p>
+<p style="text-align: justify;">Varsha Ann Jacob, from Bangalore, India, has just completed her MBA in Project Management with Dublin Business School. She was drawn to DBS after reviews that described the college as &ldquo;one of the top private business schools in Dublin.&nbsp;<span style="line-height: 1.5;">The Project Management course which I chose to do is a very specialized business course that I would recommend as it had the perfect blend of all the business elements to make a good project manager; which I think is a necessary job requirement in any field,&rdquo; she explained.&nbsp;<br>
+</span><span style="line-height: 1.5;"><br>
+Varsha Ann also explained how the class was taught in different ways, encouraging team work and also simulating real life business scenarios, readying them for a career in project management.&nbsp;</span><span style="line-height: 1.5;">Away from studying, Varsha Ann was actively involved in the many extra-curricular activities available to students in the college. She was a member of the women&rsquo;s soccer team and the Surf Society, taking a trip to Bundoran, Donegal, for a surf camp organized by the college.&nbsp;<br>
+</span><br>
+Varsha Ann says she owes her first job in Dublin to attending a Careers Fair held in the college.&nbsp; At the event she met representatives from Real Nation, a company dedicated to services in Education, Health, Environment, Consumer and Trade., and has now been working for the company for 10 months. Varsha Ann says, &ldquo;I can&rsquo;t thank DBS enough for making my Masters such a pleasant experience.&rdquo;&nbsp;</p>
+<h4 style="text-align: left;">Michelle Clooney - MBA in Human Resource Management</h4>
+<p style="text-align: justify;"><img src="/images/default-source/default-album/michelle-clooney-dbs.jpg?sfvrsn=89ddbee9_1&amp;MaxWidth=400&amp;MaxHeight=&amp;ScaleUp=false&amp;Quality=High&amp;Method=ResizeFitToAreaArguments&amp;Signature=72B7B61B4DA18286E52BA831A6D64B4D94CC7686" method="ResizeFitToAreaArguments" customsizemethodproperties="{'MaxWidth':'400','MaxHeight':'','ScaleUp':false,'Quality':'High'}" displaymode="Custom" alt="Michelle Clooney DBS" title="Michelle Clooney DBS" style="float: left;">"I made the choice to study the MBA in Human Resource Management, as it <U+200B>provided great focus towards advancing my career with its comprehensive range of modules<U+200B>.&nbsp;<br>
+<br>
+The MBA has given me the knowledge to be more focused and better understand&nbsp;the requirements to enhance my career in the field of HR. The course has benefited me in my current role as I have received &nbsp;more recognition, and greater responsibility in the workplace.<br>
+<br>
+DBS provides a very relaxed atmosphere focused directly on the integration of the course with the individual and provides the backup to enable a successful completion of the study required. <br>
+<br>
+I enjoyed the course as it helped me develop new skills and it also provided me with valuable information which will help me every day in my professional career. I feel the course has helped me improve my confidence in making business decisions and allowed me to become a strong leader."<br>
+<br>
+</p>
+<h4 style="text-align: left;">Nadia Paruk - Master of Arts (MA) in Psychoanalytic Psychotherapy</h4>
+<p style="text-align: justify;"><img src="/images/default-source/default-album/nadia-paruk.jpg?sfvrsn=8497bee9_1&amp;MaxWidth=400&amp;MaxHeight=&amp;ScaleUp=false&amp;Quality=High&amp;Method=ResizeFitToAreaArguments&amp;Signature=422CF8B9E97C8F7D0A0992787DC7186441D44C7C" method="ResizeFitToAreaArguments" customsizemethodproperties="{'MaxWidth':'400','MaxHeight':'','ScaleUp':false,'Quality':'High'}" displaymode="Custom" alt="Nadia Paruk" title="Nadia Paruk" style="float: left;">"I studied the for the MA in Psychoanalytic Psychotherapy as it is an area that I have been always been passionate about.&nbsp;<br>
+Having studied in the area of psychoanalysis previously I was eager to enter in to work in which the clinical component was emphasised and this Masters provided that. The clinical experience I gained in the three years was an invaluable part of my training.<br>
+<br>
+The course has benefited me on both a personal and a professional level.&nbsp;During my time at DBS, I found there was a real hands on approach in terms of the lecturer/student dynamic.&nbsp;There was a great support system all around and I felt comfortable in this environment.&nbsp;<br>
+<br>
+The nature of such an area, which deals with working in the area of the mind requires a lot of support and it was provided in spades.&nbsp;Even the library offered such personal assistance, it made doing my thesis that bit easier!"</p>
+<h1 style="text-align: justify;">Professional Accountancy</h1>
+<h4 style="text-align: left;">Christine Casey - P<U+200B>5 ACCA</h4>
+<h4 style="text-align: justify;"><U+200B>1st place in Ireland and 1<U+200B>st in the world</h4>
+<p style="text-align: justify;"><img src="/images/default-source/default-album/christine-casey-acca.jpg?sfvrsn=bdafbfe9_1&amp;MaxWidth=400&amp;MaxHeight=&amp;ScaleUp=false&amp;Quality=High&amp;Method=ResizeFitToAreaArguments&amp;Signature=D6FCD2AB12422C908875231DE555EBBC8F6F1FF3" displaymode="Custom" alt="Christine Casey ACCA" title="Christine Casey ACCA" method="ResizeFitToAreaArguments" customsizemethodproperties="{'MaxWidth':'400','MaxHeight':'','ScaleUp':false,'Quality':'High'}" style="float: left;">"The lecturers at DBS show real &nbsp;passion, both for their subjects &nbsp;and for the achievement of their &nbsp;students. The really give it their &nbsp;all and go above and beyond to &nbsp;do all that they can to get you to &nbsp;that pass grade and above.&nbsp;Aside &nbsp;from excellent course tutoring, &nbsp;the lecturers have a real exam &nbsp;focus during every class, giving &nbsp;tips on answer technique and &nbsp;timing that really helped me to &nbsp;achieve high marks.<br>
+<br>
+It&rsquo;s really helpful to have revision days spread across the term, to get into the exam mind-set and get practising exam style questions early in the term, to help with studying at home.<br>
+There&rsquo;s lots of opportunities to sit a full mock exam, and the QBR day is a great time to practice questions and gain valuable feedback before exam day. I have really enjoyed my time at DBS, as I have gotten great support from the lecturers, it has a good city centre location and top class tuition."</p>
+<h4 style="text-align: justify;">Emer Skelly - ACCA</h4>
+<h4 style="text-align: justify;">1st place in Ireland and 7th in the world</h4>
+<p style="text-align: justify;">
+<img src="/images/default-source/default-album/emer-skelly.jpg?sfvrsn=f08fbee9_1&amp;MaxWidth=400&amp;MaxHeight=&amp;ScaleUp=false&amp;Quality=High&amp;Method=ResizeFitToAreaArguments&amp;Signature=3718BA0ECB6246590898F3D5539A214DEE7AC383" method="ResizeFitToAreaArguments" customsizemethodproperties="{'MaxWidth':'400','MaxHeight':'','ScaleUp':false,'Quality':'High'}" displaymode="Custom" alt="Emer Skelly" title="Emer Skelly" style="float: left;">The enthusiasm of the lecturers for the subject and their enthusiasm in general was a high point. The lecturers I have been in class with so far really seem to enjoy the subjects they teach and it was never a case of just going through the motions. The careers that they have outside of lecturing have also been a motivation for me to keep going with the ACCA programme.<br>
+<br>
+<br>
+The lectures and lecture materials provided are very exam focused with some lecturers even producing their own manuals! Real life examples are given which helps to put the topics into context and makes the learning process more practical than theoretical.&nbsp;I have really enjoyed the course so far. With the knowledge I have gained from the ACCA programme at DBS, I have been able to pursue opportunities in my working life which would not otherwise have been available to me. The course has also introduced topics that I have developed a personal interest in outside of studying for exams.<br>
+<br>
+I would 100% recommend DBS to a friend and already have!<br>
+<br>
+</p>
+<h4 style="text-align: justify;">Paul Carrigg - P7 ACCA</h4>
+<h4 style="text-align: justify;">1st place in Ireland and 12th in the world</h4>
+<p style="text-align: justify;"><img src="/images/default-source/default-album/paul-carrigg.jpg?sfvrsn=c78fbee9_3&amp;MaxWidth=300&amp;MaxHeight=&amp;ScaleUp=false&amp;Quality=High&amp;Method=ResizeFitToAreaArguments&amp;Signature=229D089E62D783485801597BD35D702C6C277DD8" method="ResizeFitToAreaArguments" customsizemethodproperties="{'MaxWidth':'300','MaxHeight':'','ScaleUp':false,'Quality':'High'}" displaymode="Custom" alt="Paul Carrigg" title="Paul Carrigg" style="float: left;">I studied&nbsp;ACCA P7 at DBS. The lecturer was extremely exam focused and provided excellent exam tips. The tips related to key areas such as exam technique and time management. The lecturer provided his own exam question solutions which were easy to follow and understand. The lecturer was always willing to take time out during and after class to answer questions from students.<br>
+<br>
+The QBR sessions were extremely useful. The notes provided by the DBS lecturers were excellent and made revision easier. The facilities at DBS were also of a very high standard.<br>
+I really enjoyed my time at DBS and achieved a high score as a result of the excellent tuition I received.&nbsp;<br>
+<br>
+I would recommend DBS due to the excellent standard of lecturing which I experienced while there.<br>
+<br>
+<br>
+<br>
+</p>
+<h4 style="text-align: left;">
+Peter Duffy - P1 ACCA<br>
+<br>
+3rd place in Ireland and 13th in the world</h4>
+<p style="text-align: justify;"><img src="/images/default-source/default-album/peter-duffy-dbs.jpg?sfvrsn=75dcbee9_1&amp;MaxWidth=400&amp;MaxHeight=&amp;ScaleUp=false&amp;Quality=High&amp;Method=ResizeFitToAreaArguments&amp;Signature=C872E8949355FEBE20FD083D5644CE51E1AD38FC" method="ResizeFitToAreaArguments" customsizemethodproperties="{'MaxWidth':'400','MaxHeight':'','ScaleUp':false,'Quality':'High'}" displaymode="Custom" alt="Peter Duffy DBS" title="Peter Duffy DBS" style="float: left;">"DBS Lecturers are focused, organised and masters at their subjects. They have the&nbsp;course mapped out in advance so you know what you are doing and when but are also adaptable to students changing needs.<br>
+<br>
+<br>
+Terence was a joy to listen to, his passion for the subject and direction on exam technique I have no doubt got me to joint 3rd in Ireland. I enjoyed the course immensely. It's hard to give up your weekends but it made worth it by having a tutor who is on the ball and willing to try different tutoring techniques to help you master the material.<br>
+<br>
+At DBS you are tutored by <U+200B>people who are driven to &nbsp;get you the best result possible."<br>
+<br>
+</p>
+<h4 style="text-align: left;">Ralitsa Petrova - P6 ACCA<br>
+<br>
+3rd place in Ireland and 25th in the world</h4>
+<p style="text-align: justify;">
+<img src="/images/default-source/default-album/ralitsa-petrova-dbs.jpg?sfvrsn=4bdcbee9_1&amp;MaxWidth=400&amp;MaxHeight=&amp;ScaleUp=false&amp;Quality=High&amp;Method=ResizeFitToAreaArguments&amp;Signature=B2712E4506B8FE34243BCF36F60BEB0829067973" method="ResizeFitToAreaArguments" customsizemethodproperties="{'MaxWidth':'400','MaxHeight':'','ScaleUp':false,'Quality':'High'}" displaymode="Custom" alt="Ralitsa Petrova DBS" title="Ralitsa Petrova DBS" style="float: left;">
+</p>
+<p style="text-align: justify;">"I completed most of the ACCA exams through the ACCA courses provided by Dublin Business School. All the courses are very comprehensive and covered the entire ACCA syllabus.<br>
+All the ACCA lecturers are extremely exam focused, with extensive knowledge in their subject fields and they deliver the material in a format that is easy to understand and follow.<br>
+<br>
+<br>
+I genuinely really enjoyed my time in DBS and I am extremely happy with the lecturer&rsquo;s teaching style, delivery of the material and I would recommend DBS to anyone without any hesitation."</p>
+<h4 style="text-align: left;">Grazyna Klimek F8 ACCA<br>
+<br>
+1st place in Ireland and 9th in the world</h4>
+<div style="text-align: justify;">&nbsp;</div>
+<p style="text-align: justify;"><img src="/images/default-source/default-album/grazyna-klimek-3.jpg?sfvrsn=5d90bee9_1&amp;MaxWidth=400&amp;MaxHeight=&amp;ScaleUp=false&amp;Quality=High&amp;Method=ResizeFitToAreaArguments&amp;Signature=B7DF9F0F4B43CFB4330A619B362A0DEE97B7846F" method="ResizeFitToAreaArguments" customsizemethodproperties="{'MaxWidth':'400','MaxHeight':'','ScaleUp':false,'Quality':'High'}" displaymode="Custom" alt="Grazyna Klimek 3" title="Grazyna Klimek 3" style="float: left;">"DBS has very strong lecturers, who are well prepared and have deep knowledge about their subjects. Moreover, the campus is located in city centre so it's very easy to commute there.&nbsp;<br>
+<br>
+The ACCA programme at DBS focuses&nbsp;a lot on exams techniques and on the best ways to pass exams. Lecturers&rsquo; tips about time managing and style of marking scheme, were very helpful in getting extra marks and not losing any &ldquo;easy one&rdquo;.&nbsp;I enjoyed course a lot. I found it very useful also outside classes in real life and&nbsp;I would recommend DBS to all my friends."<br>
+<br>
+</p>
+<h4 style="text-align: justify;">Marta Majnusz F6, F9 ACCA</h4>
+<h4 style="text-align: justify;">3rd place in Ireland and 17th in the world</h4>
+<p style="text-align: justify;"><img src="/images/default-source/default-album/marta-majnusz.jpg?sfvrsn=ed8fbee9_1&amp;MaxWidth=400&amp;MaxHeight=&amp;ScaleUp=false&amp;Quality=High&amp;Method=ResizeFitToAreaArguments&amp;Signature=5A42734CBFB1E1BDCE906E976220033500D196DB" method="ResizeFitToAreaArguments" customsizemethodproperties="{'MaxWidth':'400','MaxHeight':'','ScaleUp':false,'Quality':'High'}" displaymode="Custom" alt="Marta Majnusz" title="Marta Majnusz" style="float: left;">I am currently preparing for my 5th and 6th paper at DBS and couldn't think of a better place to be in such a stressful time.<br>
+DBS has a lot to offer but what makes it for me is the people.&nbsp;<br>
+The lecturers make classes interesting and real, and they always push you to dig that little bit deeper. Classes are not just about gaining knowledge but also gaining an understanding of the subject through real life examples and building confidence in your own abilities. The programmes are designed and aimed at one thing- success.<br>
+I passed all of my exams to date with flying colours and that is all because I have been shown the way to do it and I simply followed the lead. DBS was the best choice for me and I could not recommend it high enough.&nbsp;<br>
+<div>&nbsp;</div>
+</p>
+<p style="text-align: justify;">
+</p>
+<h1 style="text-align: justify;">Springboard+</h1>
+<h4 style="text-align: left;">Aideen Sutton - Springboard+ Certificate in Digital Marketing</h4>
+<p style="text-align: justify;"><img src="/images/default-source/default-album/aideen-sutton.jpg?sfvrsn=e8afbfe9_1&amp;MaxWidth=400&amp;MaxHeight=&amp;ScaleUp=false&amp;Quality=High&amp;Method=ResizeFitToAreaArguments&amp;Signature=CE269747B218997C4F871425E2BB88036FA9C4A3" method="ResizeFitToAreaArguments" customsizemethodproperties="{'MaxWidth':'400','MaxHeight':'','ScaleUp':false,'Quality':'High'}" displaymode="Custom" alt="Aideen Sutton " title="Aideen Sutton " style="float: left;">"Prior to undertaking the &nbsp;Certificate in Digital Marketing, &nbsp;I&nbsp;had no marketing experience &nbsp;and my digital knowledge was &nbsp;very limited. Because of this &nbsp;inexperience, coupled with not &nbsp;having studied in many years, I &nbsp;felt very daunted undertaking the &nbsp;course. I need not have worried<U+200B>; &nbsp;there was great support from all &nbsp;the lecturers in assisting us with &nbsp;our studies and course work.</p>
+<p style="text-align: justify;">&nbsp;I thoroughly enjoyed every element of it from the lectures to the assignments, group work and the camaraderie with lecturers and my fellow classmates. The lecturers, all experts in their fields, were excellent. The standard of tuition was very high and they all made themselves available to answer queries and help resolve problems. There was also great support from the DBS staff which was very comforting and reassuring, especially for someone like me who had not been in college in two decades! It was great to know that you were not on your own and you only had to ask a member of staff whenever you had any problem."<br>
+<br>
+</p>
+<h1 style="text-align: justify;">ICT Skills</h1>
+<h4 style="text-align: left;">Chiara Salvo - Higher Diploma in Science in Computing (Web &amp; Cloud Technologies)&nbsp;</h4>
+<p style="text-align: justify;"><img src="/images/default-source/default-album/chiara-salvo-dbs.jpg?sfvrsn=2cdcbee9_1&amp;MaxWidth=400&amp;MaxHeight=&amp;ScaleUp=false&amp;Quality=High&amp;Method=ResizeFitToAreaArguments&amp;Signature=72FF87509F23A2480FAEC4CE1EB80DFBDBA19828" method="ResizeFitToAreaArguments" customsizemethodproperties="{'MaxWidth':'400','MaxHeight':'','ScaleUp':false,'Quality':'High'}" displaymode="Custom" alt="Chiara Salvo DBS" title="Chiara Salvo DBS" style="float: left;"></p>
+<p style="text-align: justify;">"This Programme has been greatly beneficial to my professional development and to my career.&nbsp;<br>
+The taught part of the course provided me with the knowledge of IT fundamentals that are required to start a career in the industry; whereas working on the final project and carrying out the work placement helped me gain practical experience in managing business-related projects and scenarios.&nbsp;<br>
+<br>
+<br>
+The technical aspect&nbsp;was crucial in changing my career path and securing a job in the IT industry.&nbsp;<br>
+The course was also an opportunity for self-development, since I had to push myself out of my comfort zone and immerse myself in an IT syllabus that would normally require years of study.&nbsp;<br>
+<U+200B>Also, dealing daily with professionals both in the academic and in the placement contexts was good practice for engaging with technical teams in the work environment.<br>
+<br>
+What I enjoyed most about studying in DBS was the positive and friendly learning environment. Lectures were able to combine high quality of teaching with a positive and helpful attitude at all stages during the Programme."</p>
+<h4 style="text-align: left;">Marcus Beirne - Higher Diploma in Science in Computing (Software Development)</h4>
+<p style="text-align: justify;"><img src="/images/default-source/default-album/marcus-beirne-dbs.jpg?sfvrsn=dedcbee9_1&amp;MaxWidth=400&amp;MaxHeight=&amp;ScaleUp=false&amp;Quality=High&amp;Method=ResizeFitToAreaArguments&amp;Signature=B6861E9B17520F7D228CD70F3E0F517682AAEE5D" method="ResizeFitToAreaArguments" customsizemethodproperties="{'MaxWidth':'400','MaxHeight':'','ScaleUp':false,'Quality':'High'}" displaymode="Custom" alt="Marcus Beirne DBS" title="Marcus Beirne DBS" style="float: left;">"The course provided a great foundation in c# programming, and databases; <U+200B>as well as a good introduction to information systems, networking and operating systems. The course also gave me the opportunity to do an internship <U+200B>with&nbsp;Version 1, who are now my current employer.&nbsp;The course was very intense&nbsp;<U+200B>and&nbsp;you can benefit a lot.&nbsp;Having an internship a part of the curriculum was a huge help as it provides a way to gain industry experience, and in many cases (mine included) leads to a job."</p>
+<h1 style="text-align: left;">Professional Evening Diplomas</h1>
+<h4 style="text-align: left;">Linda Blaas - Diploma in Business Studies</h4>
+<p style="text-align: justify;"><img src="/images/default-source/default-album/linda-blaas-dbs.jpg?sfvrsn=edddbee9_1&amp;MaxWidth=400&amp;MaxHeight=&amp;ScaleUp=false&amp;Quality=High&amp;Method=ResizeFitToAreaArguments&amp;Signature=82ED8ED6C77AAEB49C657FF577A22A54C6E8AD87" method="ResizeFitToAreaArguments" customsizemethodproperties="{'MaxWidth':'400','MaxHeight':'','ScaleUp':false,'Quality':'High'}" displaymode="Custom" alt="Linda Blaas DBS" title="Linda Blaas DBS" style="float: left;"><br>
+"This course has helped me figure out a lot of my strengths and weaknesses. I found out what subjects don't suit me and thus I can stay away from them in my professional life. This&nbsp;course gave me a much better understanding of the running of the company I work for as well.<br>
+<br>
+I enjoyed this course very much as there was a great atmosphere, with great classmates and lecturers. Each evening i learned things which i could apply at my workplace the next day.<br>
+The lecturers were extremely&nbsp;helpful, very good at explaining things and would provide extra help when needed."</p>
+<h4 style="text-align: left;">Noreen Collins - Diploma in Event Management and PR</h4>
+<p style="text-align: justify;"><img src="/images/default-source/default-album/noreen-collins-dbs.jpg?sfvrsn=59ddbee9_1&amp;MaxWidth=400&amp;MaxHeight=&amp;ScaleUp=false&amp;Quality=High&amp;Method=ResizeFitToAreaArguments&amp;Signature=8B8CD78DC35D72271029D4711BE9B10E87A36480" method="ResizeFitToAreaArguments" customsizemethodproperties="{'MaxWidth':'400','MaxHeight':'','ScaleUp':false,'Quality':'High'}" displaymode="Custom" alt="Noreen Collins DBS" title="Noreen Collins DBS" style="float: left;">"I chose the course primarily for a challenge and because I have, for a number of years, &nbsp;been running events.&nbsp;I felt that having a qualification may open more doors.<br>
+<br>
+&nbsp;I have thoroughly enjoyed the course and I have made some wonderful new friends. Our class got on particularly well and our lecturers were not only engaging but went out of their way to help every student. &nbsp;I was the oldest in the class and&nbsp;I always felt part of the group.&nbsp;The whole experience has given me a great confidence boost.<br>
+<br>
+&nbsp;The best thing about studying in DBS has to be the lecturers. They definitely made it for me. They are genuinely interested in their pupils and made going to class both interesting &amp; fun. Well done DBS."<br>
+<br>
+</p>
+<h4 style="text-align: left;">Maria Paola Vercesi - Diploma in Tourism Management and Marketing</h4>
+<p style="text-align: justify;"><img src="/images/default-source/default-album/maria-paola-vercesi-dbs.jpg?sfvrsn=bdcbee9_1&amp;MaxWidth=400&amp;MaxHeight=&amp;ScaleUp=false&amp;Quality=High&amp;Method=ResizeFitToAreaArguments&amp;Signature=819EBBE4D29E1827398085B39A749413C363ADEC" method="ResizeFitToAreaArguments" customsizemethodproperties="{'MaxWidth':'400','MaxHeight':'','ScaleUp':false,'Quality':'High'}" displaymode="Custom" alt="Maria Paola Vercesi DBS" title="Maria Paola Vercesi DBS" style="float: left;">"Since I moved to Ireland, I developed great interest in the tourism industry and I thought this course would provide a good balance of academic and operational knowledge in that area.&nbsp;The course gave me a comprehensive view of the tourism business and the chance to develop specific tourism-related interests.&nbsp;Lectures were enriching and engaging. In one assignment I also had the chance to blueprint a long-envisaged idea into a project.&nbsp;My favourite thing about DBS was the&nbsp;relaxed atmosphere mixed with serious educational commitment."<br>
+<div>&nbsp;</div>
+</p>
+<h4 style="text-align: left;">Sarah Louise O'Toole - Diploma in Selling and Sales Management</h4>
+<p style="text-align: justify;"><img src="/images/default-source/default-album/sarah-louise-otoole-dbs.jpg?sfvrsn=6cdcbee9_1&amp;MaxWidth=400&amp;MaxHeight=&amp;ScaleUp=false&amp;Quality=High&amp;Method=ResizeFitToAreaArguments&amp;Signature=5EECF4654C6024B64C1F84E8E581B42344BFF9E1" method="ResizeFitToAreaArguments" customsizemethodproperties="{'MaxWidth':'400','MaxHeight':'','ScaleUp':false,'Quality':'High'}" displaymode="Custom" alt="Sarah Louise OToole  DBS" title="Sarah Louise OToole  DBS" style="float: left;">"I felt that by doing this course it would&nbsp;allow me to grow within the company and give me more information on how to improve my career.<br>
+<br>
+I had always wanted to attend DBS as I had heard great things about the college<U+200B>.<br>
+<br>
+The course has now given me so much more confidence in my role and day to day life. It has g<U+200B>iven me more of an insight to what I do, not only sales but also the running of a business day to day. It is a huge achievement. I can now say to my clients that I have a Diploma in Sales and Business Management and I feel people take me more seriously in my career.<br>
+<br>
+I felt the best thing was the structure of the course and how it was presented in detail every week. I never felt alone and there was always help there if I needed it.<br>
+I enjoyed my time in DBS and I am so happy that I have achieved it and have my diploma!"<br>
+<br>
+</p>
+
+
+</div>
+        
+        </div>
+    </div>
+</div>
+            
+        </div>
+    </div>
+</div>
+            
+        </div>
+    </div>
+</div><div class="sf_cols Footer DBS_Gray">
+    <div style="" class="sf_colsOut sf_1col_1_100">
+        <div id="ContentPlaceHolder1_TB6148D1A016_Col00" class="sf_colsIn sf_1col_1in_100"><div class="sf_cols InnerWrapper">
+    <div style="width: 100%;" class="sf_colsOut sf_1col_1_100">
+        <div id="ContentPlaceHolder1_TB6148D1A019_Col00" class="sf_colsIn sf_1col_1in_100"><div class="sf_cols">
+    <div class="sf_colsOut sf_4cols_1_25 Footer_About">
+        <div id="ContentPlaceHolder1_TB6148D1A025_Col00" class="sf_colsIn sf_4cols_1in_25"><div class='sfContentBlock Footer_Header'><p><strong>ABOUT DBS</strong></p>
+
+
+</div>
+
+
+
+
+<div class="sfNavWrp sfNavVerticalWrp FooterContent">
+    
+    
+
+<a id="ContentPlaceHolder1_TB6148D1A038_ctl00_ctl00_ctl01_ctl00_ctl00_toggleAnchor" class="sfNavToggle">Menu</a>
+
+<script type="text/javascript">
+    (function ($) {
+        $($get('ContentPlaceHolder1_TB6148D1A038_ctl00_ctl00_ctl01_ctl00_ctl00_toggleAnchor')).click(function () {
+            $(this).closest(".sfNavWrp").find(".sfNavList").toggleClass("sfShown");
+        });
+    })(jQuery);
+</script>
+    
+    
+
+    <ul class="sfNavVertical sfNavList">
+        
+                            <li>
+                                <a href="/about-dbs/welcome">Welcome to Dublin Business School</a>          
+                            </li>
+                         
+                            <li>
+                                <a href="/about-dbs/history-of-dbs">History of DBS</a>          
+                            </li>
+                         
+                            <li>
+                                <a href="/about-dbs/academic-schools-staff">Academic School &amp; Staff</a>          
+                            </li>
+                         
+                            <li>
+                                <a href="/about-dbs/recognition-and-accreditation">Recognition &amp; Accreditation</a>          
+                            </li>
+                         
+                            <li>
+                                <a href="/advantage">DBS Advantage</a>          
+                            </li>
+                         
+                            <li>
+                                <a href="/about-dbs/for-employers">For Employers</a>          
+                            </li>
+                         
+                            <li>
+                                <a href="/about-dbs/for-guidance-counsellors">For Guidance Counsellors</a>          
+                            </li>
+                         
+                            <li>
+                                <a href="/about-dbs/kaplan-dublin-business-school">Kaplan businesses</a>          
+                            </li>
+                         
+                            <li>
+                                <a href="/about-dbs/jobs-dublin-business-school">Vacancies</a>          
+                            </li>
+                         
+                            <li>
+                                <a href="/about-dbs/hetac-institutional-review">HETAC Institutional Review</a>          
+                            </li>
+                         
+                            <li>
+                                <a href="/about-dbs/new-programmes-at-dbs">New programmes at DBS</a>          
+                            </li>
+                         
+                            <li>
+                                <a href="/about-dbs/dbs-esource">DBS eSource</a>          
+                            </li>
+                         
+                            <li>
+                                <a href="/about-dbs/why-dbs">Why DBS</a>          
+                            </li>
+                         
+    </ul>
+</div>
+<div class='sfContentBlock FooterContent'><li><a href="/international-students">International Students</a></li>
+<li>
+<a href="/terms-and-conditions">Terms and Conditions</a>
+</li>
+<li>
+<a href="/privacy-policy">Privacy Policy</a></li>
+<li><a href="/cookie-policy">Cookie Policy</a></li>
+<li>
+<a href="/company-registration-details">Company Registration Details</a>
+</li>
+<li>
+<a href="http://www.dbs.ie/course/online-courses">DBX</a>
+</li>
+
+
+</div>
+            
+        </div>
+    </div>
+    <div class="sf_colsOut sf_4cols_2_25 Footer_DBS">
+        <div id="ContentPlaceHolder1_TB6148D1A025_Col01" class="sf_colsIn sf_4cols_2in_25"><div class='sfContentBlock Footer_Header'><p><strong>COURSES BY SUBJECT</strong></p>
+
+
+</div><div class='sfContentBlock FooterContent'><li><a href="http://www.dbs.ie/courses/accounting-and-finance">Accounting and Finance</a></li>
+<li><a href="http://www.dbs.ie/courses/arts">Arts</a></li>
+<li><a href="http://www.dbs.ie/courses/business-management">Business and Management</a></li>
+<li><a href="http://www.dbs.ie/courses/counselling-and-psychotherapy">Counselling and Psychotherapy</a></li>
+<li><a href="http://www.dbs.ie/courses/information-technology">Information Technology</a></li>
+<li><a href="http://www.dbs.ie/courses/law">Law</a></li>
+<li><a href="http://www.dbs.ie/courses/marketing-and-event-management">Marketing and Event Management</a></li>
+<li><a href="http://www.dbs.ie/courses/media-and-journalism">Media and Journalism</a></li>
+<li><a href="http://www.dbs.ie/courses/professional-accountancy">Professional Accountancy</a></li>
+<li><a href="http://www.dbs.ie/courses/psychology-social-science">Psychology and Social Science</a></li>
+
+
+</div>
+            
+        </div>
+    </div>
+    <div class="sf_colsOut sf_4cols_3_25 Footer_Student">
+        <div id="ContentPlaceHolder1_TB6148D1A025_Col02" class="sf_colsIn sf_4cols_3in_25"><div class='sfContentBlock Footer_Header'><p><strong><U+200B>COURSES BY TYPE</strong></p>
+
+
+</div><div class='sfContentBlock FooterContent'><li><a href="http://www.dbs.ie/courses/evening-degree">Evening Degrees</a></li>
+<li><a href="http://www.dbs.ie/courses/full-time-undergraduate">Full-time Degrees / Certificates</a></li>
+<li><a href="http://www.dbs.ie/courses/ict-skills-programme">ICT Skills Programme</a></li>
+<li><a href="http://www.dbs.ie/courses/postgraduate">Postgraduate Courses</a> </li>
+<li><a href="http://www.dbs.ie/courses/professional-accountancy">Professional Accountancy</a></li>
+<li><a href="http://www.dbs.ie/courses/professional-evening-diploma">Professional Evening Diplomas</a></li>
+<li><a href="http://www.dbs.ie/courses/springboard">Springboard+</a></li>
+<li><a href="http://www.dbs.ie/course/online-courses">DBX Online Courses</a></li>
+
+
+</div><div class='sfContentBlock Footer_Header'><p><strong>STUDENT RESOURCES</strong></p>
+
+
+</div><div class='sfContentBlock FooterContent'><li><a href="http://library.dbs.ie">DBS Library</a></li>
+<li><a href="/student-experience">Student Services</a></li>
+<li><a href="/student-experience/careers">Careers</a></li>
+<li><a href="http://students.dbs.ie/registrar-office">Registrar's office</a></li>
+<li><a href="http://students.dbs.ie/exams-office">Exam office</a></li>
+
+
+</div>
+            
+        </div>
+    </div>
+    <div class="sf_colsOut sf_4cols_4_25 Footer_Kaplan">
+        <div id="ContentPlaceHolder1_TB6148D1A025_Col03" class="sf_colsIn sf_4cols_4in_25"><div class='sfContentBlock Footer_Header'><p><strong><U+200B>DUBLIN BUSINESS SCHOOL</strong></p>
+
+
+</div><div class='sfContentBlock FooterContent'><div style="text-align: right;" class="FooterCol4">
+13/14 Aungier Street,<br>
+Dublin 2,<br>
+Ireland.<br>
+<br>
+T: +353 1 417 7500<br>
+E: <a href="mailto:admissions@dbs.ie">admissions@dbs.ie</a><br>
+<br>
+<br>
+<img title="kaplan-logo-footer" alt="kaplan-logo-footer" displaymode="Original" src="/images/default-source/logos/kaplan-logo-footer.png?sfvrsn=1530a0e9_2" style="float: left;"><br>
+<br>
+&nbsp;DBS is part of KAPLAN INC.<br>
+provider of Education Services
+</div>
+
+
+</div><div class='sfContentBlock FooterContent'><div id="FooterIcons" style="float: right;">
+<a href="https://twitter.com/dbscollege" class="SocialTwitter" style="float: left; width: 40px; height: 40px; background: url('/images/default-source/social-icons/twitter.png?sfvrsn=8') 0% 0% repeat scroll transparent;"></a>
+<a href="https://www.facebook.com/DublinBusinessSchool" class="SocialFB" style="float: left; width: 40px; height: 40px; background: url('/images/default-source/social-icons/fb.png?sfvrsn=8') 0% 0% repeat scroll transparent;"></a>
+<a href="https://plus.google.com/104823954619043738289/about" class="SocialGP" style="float: left; width: 40px; height: 40px; background: url('/images/default-source/social-icons/gplus.png?sfvrsn=8') 0% 0% repeat scroll transparent;"></a>
+<a class="SocialInstagram" style="float: left; width: 40px; height: 40px; background: url('/images/default-source/social-icons/insta.png?sfvrsn=2') 0% 0% repeat scroll transparent;" href="https://instagram.com/dbscollege/"></a></div>
+
+
+</div>
+            
+        </div>
+    </div>
+</div><div class="sf_cols">
+    <div class="sf_colsOut sf_2cols_1_50">
+        <div id="ContentPlaceHolder1_TB6148D1A026_Col00" class="sf_colsIn sf_2cols_1in_50">
+            
+        </div>
+    </div>
+    <div class="sf_colsOut sf_2cols_2_50">
+        <div id="ContentPlaceHolder1_TB6148D1A026_Col01" class="sf_colsIn sf_2cols_2in_50"><div class='sfContentBlock FooterCopyright FooterContent'><div style="float: right;">&copy; <span class="copy"></span>, Dublin Business School</div>
+
+
+</div>            
+        </div>
+    </div>
+</div>
+            
+        </div>
+    </div>
+</div>
+            
+        </div>
+    </div>
+</div>
+        </div>
+
+        <script>(function (i, s, o, g, r, a, m) {
+i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+(i[r].q = i[r].q || []).push(arguments)
+}, i[r].l = 1 * new Date(); a = s.createElement(o),
+m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+ga('create', 'UA-6683088-9', 'dbs.ie');
+ga('send', 'pageview');
+var $viewport = $('head meta[name="viewport"]');
+$viewport.attr('content', 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no');
+document.body.style.opacity = .9999;
+setTimeout(function () {
+document.body.style.opacity = 1;
+}, 1);
+</script>
+
+               
+        <script type="text/javascript">
+            $(function () {
+
+                var page = window.location.pathname;
+                var spliturl = [];
+                spliturl = page.split("/")
+
+                var currentPageUrlIs = spliturl[1];
+                var headerTitle;
+
+                switch (currentPageUrlIs) {
+
+                    case 'courses':
+                        $(".TopBanner").addClass("courses_banner");
+                        $(".TopBanner").removeClass("TopBanner");
+                        break;
+                    case 'about-dbs':
+
+                        $(".TopBanner").addClass("why-dbs_banner");
+                        $(".TopBanner").removeClass("TopBanner");
+
+                        headerTitle = 'About DBS';
+
+                        break;
+                    case 'contact-dbs':
+                        $(".TopBanner").addClass("contact_banner");
+                        $(".TopBanner").removeClass("TopBanner");
+                        headerTitle = 'Contact DBS';
+
+                        break;
+                    case 'student-experience':
+                        $(".TopBanner").addClass("student-experience_banner");
+                        $(".TopBanner").removeClass("TopBanner");
+
+                        headerTitle = 'Student Experience';
+
+                        break;
+                    case 'contact':
+                        $(".TopBanner").addClass("contact_banner");
+                        $(".TopBanner").removeClass("TopBanner");
+                        headerTitle = 'Contact';
+
+                        break;
+                    case 'news-and-events':
+                        $(".TopBanner").addClass("News-Events_banner");
+                        $(".TopBanner").removeClass("TopBanner");
+                        headerTitle = "News Events";
+                        break;
+                    case 'application-form':
+                        $(".TopBanner").addClass("apply_banner");
+                        $(".TopBanner").removeClass("TopBanner");
+                        headerTitle = "Apply";
+                        break;
+                    case 'dbs-online':
+                        $(".TopBanner").addClass("apply_banner");
+                        $(".TopBanner").removeClass("TopBanner");
+                        headerTitle = "DBS Online Courses";
+                        break;
+                    case 'enquirysubmitted':
+                        $(".TopBanner").addClass("TopBanner");
+                        headerTitle = "Enquiry Submitted";
+                        break;
+                    default:
+                        $(this).addClass("TopBanner");
+
+                        if (currentPageUrlIs != "course") {
+
+                            headerTitle = currentPageUrlIs;
+                        }
+                        else if (spliturl[2] == "online-courses") {
+                            headerTitle = "Our Online Courses";
+                        }
+
+                        if (headerTitle != null) {
+                            headerTitle = headerTitle.replace(/-/g, " ").replace(/\w\S*/g, function (txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); });
+                        }
+                        break;
+                }
+
+                if (headerTitle != null) {
+                    if (!$(".subjectAreaBC")[0] || spliturl[2] == "online-courses") {
+                        $(".bannerH1:eq(0)").html(headerTitle);
+                    }
+                }
+
+            });
+
+           
+
+            function showResMenu() {
+
+                $('.MainNavigation').css('display', 'block');
+
+            }
+        </script>
+
+        <script type="text/javascript" src="/Javascript/global.js"></script>
+         <!--	<span id="HostName">WEB01-CA-SVR01</span>-->
+    
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="A501B32E">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+;(function() {
+                        function loadHandler() {
+                            var hf = $get('ctl08_TSSM');
+                            if (!hf._RSSM_init) { hf._RSSM_init = true; hf.value = ''; }
+                            hf.value += ';Telerik.Sitefinity.Resources, Version=10.2.6626.0, Culture=neutral, PublicKeyToken=b28c218413bdf563:en:75ec3a6b-4122-4e56-a1f4-58f0be0d90a0:7a90d6a;Telerik.Sitefinity.Resources, Version=10.2.6626.0, Culture=neutral, PublicKeyToken=b28c218413bdf563:en:75ec3a6b-4122-4e56-a1f4-58f0be0d90a0:83fa35c7';
+                            Sys.Application.remove_load(loadHandler);
+                        };
+                        Sys.Application.add_load(loadHandler);
+                    })();Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadSiteMap, null, null, null, $get("ctl00_ContentPlaceHolder1_TB6148D1A055_ctl00_ctl00_Breadcrumb"));
+});
+//]]>
+</script>
+</form>
+</body>
+</html>
